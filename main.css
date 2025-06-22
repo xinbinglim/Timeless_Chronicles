@@ -588,7 +588,6 @@ button:hover {
 #history-slider {
   width: 100%;
   margin: 20px 0;
-  -webkit-appearance: none;
   height: 8px;
   background: var(--other-color);
   border-radius: 4px;
