@@ -1,0 +1,424 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+  --base-color: white;
+  --base-varient: #e8e9ed;
+  --primary-text: #161616;
+  --secondary-text: #292929;
+  --tertiary-text: #3d3d3d;
+  --accent-color: #625e79;
+  --other-color: #bdb8d7;
+}
+
+.darkmode{
+  --base-color: black;
+  --base-varient: #383838;
+  --primary-text: white;
+  --secondary-text: #F5F5F5;
+  --tertiary-text: #CBCBCB;
+  --accent-color: #7d6fb3;
+  --other-color: #322c50;
+}
+
+
+#theme-switch{
+  height:50px;
+  width:50px;
+  padding: 0;
+  border-radius: 50%;
+  background-color: var(--base-varient);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+#theme-switch img{
+  fill: black;
+}
+
+.darkmode #theme-switch img{
+  fill: white;
+}
+
+#theme-switch img:last-child{
+  display: none;
+}
+
+#theme-switch img:first-child{
+  display: block;
+}
+
+.darkmode #theme-switch img:first-child{
+  display: none;
+}
+
+.darkmode #theme-switch img:last-child{
+  display: block;
+}
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+}
+
+.loader {
+  position: fixed;
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+  background: var(--base-varient);
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader::after {
+  content: "Loading...";
+  font-size: 24px;
+  color: var(--tertiary-text);
+}
+
+body{
+   background-color: var(--base-varient);
+}
+
+.wrapper{
+  display: flex;
+  position: relative;
+}
+
+.wrapper .sidebar{
+  width: 200px;
+  height: 100%;
+  background: var(--accent-color);
+  padding: 30px 0px;
+  position: fixed;
+}
+
+.wrapper .sidebar h2{
+  color: var(--base-color);
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.wrapper .sidebar ul li{
+  padding: 15px;
+  border-bottom: 1px solid ;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  border-top: 1px solid rgba(255,255,255,0.05);
+}    
+
+.wrapper .sidebar ul li a{
+  color: var(--other-color);
+  display: block;
+}
+
+.wrapper .sidebar ul li a .fas{
+  width: 25px;
+}
+
+.wrapper .sidebar ul li:hover{
+  background-color: var(--accent-color);
+}
+    
+.wrapper .sidebar ul li:hover a{
+  color: var(--base-color);
+}
+ 
+.wrapper .sidebar .social_media{
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.wrapper .sidebar .social_media a{
+  display: block;
+  width: 40px;
+  background: var(--accent-color);
+  height: 40px;
+  line-height: 45px;
+  text-align: center;
+  margin: 0 5px;
+  color: var(--other-color);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.wrapper .main_content{
+  width: 100%;
+  margin-left: 200px;
+}
+
+.wrapper .main_content .header{
+  padding: 20px;
+  background: var(--base-color);
+  color: var(--primary-text);
+  border-bottom: 5px solid var(--tertiary-text);
+}
+
+.wrapper .main_content .home-section-area{
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  margin: 20px;
+  padding: 0 20px;
+}
+
+.home-section-area .image-container{
+  flex-shrink: 0;
+}
+
+.home-section-area .image-container img{
+  max-width: 500px;
+  height: auto;
+  display: block;
+}
+
+.home-section-area .text-container{
+  margin-right: 20px;
+  flex-grow: 1;
+}
+
+.wrapper .main_content div{
+  margin: 20px;
+  color: var(--tertiary-text);
+  line-height: 25px;
+  margin: 20px;
+}
+
+.art-section-area h2{
+  color: var(--secondary-text);
+  margin-bottom: 20px;
+}
+
+.art-section-area strong{
+  font-size: 1.1em; /* Slightly larger headings */
+  color: var(--secondary-text); /* Darker color for headings */
+}
+
+.clearfix {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 40px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+  box-sizing: border-box; 
+}
+
+.img-container{
+  border: 2px solid var(--tertiary-text);
+  border-radius: 15px;
+  background-color: var(--base-color);
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+  padding: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center; 
+  text-align: center;
+}
+
+.img-container img{
+  max-width: calc(100% - 40px);
+  max-height: calc(100% - 80px);
+  height: auto;
+  display: block;
+  object-fit: contain;
+  border-radius: 8px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.img-container p {
+  margin-bottom: 20px;
+  padding: 0 10px;
+  text-align: center;
+  color: var(--tertiary-text);
+  font-size: 0.9em;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.img-container .tooltiptext {
+  visibility: hidden;
+  width: auto;
+  background-color: darkgray;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.img-container:hover .tooltiptext {
+  visibility: visible;
+}
+
+@media (max-height: 500px){
+  .social_media{
+    display: none !important;
+  }
+}
+
+.art-timeline {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.art-timeline button {
+  padding: 10px 15px;
+  border: none;
+  background-color: var(--secondary-text);
+  color: var(--base-color);
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.art-timeline button:hover {
+  background-color:var(--tertiary-text);
+}
+
+.art-timeline-content {
+  background-color: var(--base-varient);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px var(--secondary-text);
+  margin-bottom: 20px;
+}
+
+.art-timeline-content h3 {
+  color: var(--primary-text);
+  margin-top: 0;
+}
+
+.art-timeline-content p {
+  color: var(--secondary-text);
+}
+
+.art-timeline-content .art-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+    grid-auto-rows: min-content;
+}
+
+.art-timeline-content .art-item {
+    text-align: center;
+    padding: 10px;
+    background-color:var(--base-color);
+    border-radius: 5px;
+    box-shadow: 0 1px 3px var(--primary-text);
+    display: flex; /* Use flexbox for vertical alignment */
+    flex-direction: column;
+    justify-content: space-between; /* Distribute space evenly */
+}
+
+.art-timeline-content .art-item img {
+    max-width: 100%;
+    max-height: 400px; /* Or a percentage like 60vh, adjust as needed */
+    height: auto;
+    object-fit: contain; /* Or 'cover' depending on desired effect */
+    border-radius: 3px;
+    margin-bottom: 10px; /* Space between image and text */
+}
+
+.art-timeline-content .art-item p {
+    font-size: 0.9em; /* Slightly smaller text */
+    margin: 0;
+    color: var(--tertiary-text);
+}
+
+.art-timeline-content #title{
+    color: var(--primary-text);
+}
+
+.art-timeline-content #description{
+    color: var(--secondary-text);
+}
+
+#art-fact {
+  background: linear-gradient(135deg, #ffe0b3, #ffd699);
+  color: #333;
+  padding: 15px 20px;
+  margin-top: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  font-size: 18px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0; /* Start with opacity 0 so it's hidden before animation */
+  transform: scale(0.9); /* Start slightly scaled down */
+  transition: all 0.5s ease; /* Keep the transition for a smoother hover effect */
+}
+
+#art-fact.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+#art-fact:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #ffd699, #ffbb66);
+}
+
+.fact-card {
+  background: linear-gradient(135deg, #fff3b0, #ffe0b2);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  text-align: left;
+  max-width: 600px;
+  margin: 20px auto;
+  font-size: 18px;
+  transition: transform 0.4s ease;
+}
+
+.fact-card:hover {
+  transform: scale(1.03);
+}
+
+.fact-header {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: var(--primary-text);
+}
+
+.fact-body {
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: var(--secondary-text);
+}
+
+.fact-detail {
+  font-size: 0.95em;
+  color: var(--tertiary-text);
+}

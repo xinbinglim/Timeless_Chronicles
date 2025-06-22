@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Timeless Chronicles</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/091cfae012.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.js"></script>
+</head>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+</style>
+
+<body>
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>AOS.init();</script>
+<script src="script.js" defer></script>
+
+<div id="loader" class="loader"></div>
+
+<header>
+  <h1>Timeless Chronicles</h1>
+  <p>Explore the Fusion of Art, History & Fashion Across Time</p>
+  <nav>
+    <ul>
+        <li><a href="#history">History</a></li>
+        <li><a href="#art">Art</a></li>
+        <li><a href="#fashion">Fashion</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="floating-shapes"></div>
+
+<div style="text-align: center; margin: 20px;">
+  <button id="top-btn">⬆️ Top</button>
+  <button id="play-music-btn">🎵 Play Background Music</button>
+  <button id="toggle-theme-btn" title="Switch between light and dark mode">🌓 Toggle Theme</button>
+</div>
+
+<audio id="bg-music" loop volume="1">
+  <source src="audios/Timeless-Memories.mp3">
+  Your browser does not support the audio element.
+</audio>
+
+
+<div style="text-align: center; margin: 10px 0;">
+  <label for="volume-slider">Volume: <span id="volume-label">50%</span></label>
+  <input type="range" id="volume-slider" min="0" max="1" step="0.05" value="0.5" />
+</div>
+
+<section id="art" data-aos="fade-up"    data-aos-duration="1000" data-aos-delay="200">
+  <h2>🎨 Art Through the Ages</h2>
+  <div class="art-history-overview">
+  <p><strong>🎨 The Amazing Story of Art: From Caves to Computers</strong>
+  </p>
+  <p>Art has always been part of human life — from drawing on cave walls to creating cool digital pictures today. It tells our stories, shows our feelings, and helps us share ideas across time and space!</p>
+  <br>
+  <p><strong>🖐️ First Drawings: The Beginning of Art</strong></p>
+  <p>Thousands of years ago, before cities or books, early humans drew animals on cave walls using sticks and natural colors. These weren't just doodles — they showed hunting stories or maybe even magical beliefs.</p>
+  <p><strong>Fun Fact:</strong> Some cave drawings are over <em>40,000 years old</em>!</p>
+  <br>
+  <p><strong>🏺 Ancient Civilizations: Art for Kings and Gods</strong></p>
+  <p>As people built cities, art became even more important:</p>
+  <div class="clearfix">
+    <div class="img-container"><p>📜 In <strong>Egypt</strong>, art helped guide pharaohs to the afterlife.</p>
+    <img src="https://cdn.mos.cms.futurecdn.net/YMa7Wx2FyjQFUjEeqa72Rm-1200-80.jpg" alt="Egypt"><span class="tooltiptext">Pyramids</span>
+    </div>
+    
+    <div class="img-container"><p>🗿 In <strong>China</strong>, artists made a whole clay army for one emperor.</p>
+    <img src="https://media.odynovotours.com/article/78000/terracotta-army-cover_75223.jpg" alt="China"><span class="tooltiptext">Pyramids</span>
+    </div>
+    
+    <div class="img-container"><p>🏛️ In <strong>Greece</strong>, statues showed gods and heroes in action.</p>
+    <img src="https://content.api.news/v3/images/bin/7f3fd1e111ae42e4ff9bd9afb025c286" alt="Greece"><span class="tooltiptext">Pyramids</span>
+    </div>
+  </div>    
+  <p>Art showed what people believed in and what they thought was important.</p>
+  <br>
+  <p><strong>🖌️ The Renaissance: Art Gets Real</strong></p>
+  <p>About 500 years ago in Europe, the <strong>Renaissance</strong> began — a time of learning, science, and amazing art.</p>
+  <p>Artists like <strong>Leonardo da Vinci</strong> painted lifelike people. In <strong>Japan</strong>, artists made prints of waves and nature. In <strong>India</strong>, tiny paintings told royal stories.</p>
+  <br>
+  <p><strong>🏭 New Ideas and Big Changes</strong></p>
+  <p>In the 1800s, machines and factories changed life — and art too!</p>
+  <ul>
+    <li>🎨 Painters like <strong>Van Gogh</strong> showed feelings with colors and swirls.</li>
+    <li>📸 Photography let artists capture real life with cameras.</li>
+    <li>🧵 Indigenous artists used symbols to share their ancient stories.</li>
+  </ul>
+  <br>
+  <p><strong>💻 Art in the Digital World</strong></p>
+  <p>Today, art lives in phones, apps, and games!</p>
+  <ul>
+    <li>📱 People share art on <strong>Instagram</strong> and YouTube.</li>
+    <li>🤖 Some artists use <strong>AI</strong> to help make amazing pictures.</li>
+    <li>🎟️ Art is even sold as <strong>NFTs</strong> — digital collector’s items!</li>
+  </ul>
+  <br>
+  <p><strong>🌟 Art Never Stops</strong></p>
+  <p>From cave paintings to digital designs, art keeps changing. But one thing stays the same:</p>
+  <blockquote><strong>Art helps us imagine, connect, and express who we are!</strong></blockquote>
+  <p>So whether you’re coloring in class, drawing comics, or designing something cool — you’re part of art history too! 🎉</p>
+  </div>
+  <p>Click on each button to see how art has evolved with us - From the first cave doodles to AI-generated masterpieces.</p>  
+  
+  <div class="art-timeline">
+    <button data-era="prehistoric">Prehistoric</button>
+    <button data-era="ancient">Ancient</button>
+    <button data-era="renaissance">Renaissance</button>
+    <button data-era="baroque">Baroque</button>
+    <button data-era="impressionism">Impressionism</button>
+    <button data-era="modern">Modern</button>
+    <button data-era="ai-generated">AI-Generated</button>
+  </div>
+
+  <div id="art-timeline-content" class="art-timeline-content">
+  </div>
+
+  <button id="art-fact-btn">💡 Click for Fun Art Fact</button>
+  <p id="art-fact"></p>
+
+  <div style="text-align: center; margin-top: 40px;">
+  <h3>🎨 Create Your Own AI Art</h3>
+  <p>Use AI to generate images based on your imagination!</p>
+  <a href="https://www.craiyon.com/" target="_blank" class="ai-art-btn">🖌️ Try Craiyon AI Art Generator</a>
+</div>
+
+  <h3>🧬 Art Quiz Challenge</h3>
+  <div id="quiz-container">
+    <button id="start-quiz-btn">▶️ Start Quiz</button>
+    <p id="score-display">Score: 0</p>
+    <progress id="quiz-progress" value="1" max="10"></progress>
+    <p id="quiz-timer">⏳ Time Left: <span id="time-left">15</span> seconds</p>
+    <div id="art-quiz-question"></div>
+    <div id="quiz-options"></div>
+    <button id="next-btn">Next</button>
+    <button id="retry-btn" style="display: none;">🔁 Try Again</button>
+    <div id="quiz-result"></div>
+  </div>
+</section>
+
+<section id="history" data-aos="zoom-in">
+  <h2>📚 History Timeline</h2>
+  <p>Take a scroll through the monumental milestones of human civilization.</p>
+  <input type="range" min="0" max="5" value="0" id="history-slider" />
+  <p id="history-output"></p>
+  <div class="civilization-timeline">
+  <a href="https://www.timemaps.com/history/" target="_blank" class="ai-art-btn">🗺️ Explore the Interactive History Map</a>
+
+
+<div class="timeline-card" data-aos="fade-up">
+    <h3>🧬 Prehistory</h3>
+    <p><strong>Early Human Evolution:</strong> Development of tools, use of fire, and emergence of Homo sapiens.</p>
+    <p><strong>Neolithic Revolution:</strong> Rise of agriculture and settled communities around 10,000 BCE.</p>
+    <p><strong>Early Civilizations:</strong> Birth of writing systems and complex societies.</p>
+    <button onclick="this.nextElementSibling.classList.toggle('show')">📖 Show Details</button>
+    <div class="timeline-details">
+     <ul>
+      <li>🔥 Mastery of fire allowed warmth, cooking, and protection.</li>
+      <li>🪓 Early stone tools (Oldowan and Acheulean) helped humans hunt and build.</li>
+      <li>🎨 Cave paintings and symbolic artifacts hint at spiritual and cultural life.</li>
+      <li>🚶‍♂️ Human migration out of Africa led to global spread of Homo sapiens.</li>
+    </ul>
+   </div>
+   <h4>🧩 Mini Game: Match the Tool</h4>
+<p>Drag each tool to its correct use:</p>
+
+<div class="match-tools-container">
+  <div class="tool-options">
+    <div class="tool" draggable="true" data-match="fire">🔥 Fire</div>
+  <div class="tool" draggable="true" data-match="axe">🪓 Stone Axe</div>
+  <div class="tool" draggable="true" data-match="spear">🏹 Spear</div>
+  <div class="tool" draggable="true" data-match="hammer">🪨 Hammerstone</div>
+  <div class="tool" draggable="true" data-match="shell">🐚 Shell</div>
+  <div class="tool" draggable="true" data-match="needle">🧵 Bone Needle</div>
+</div>
+
+  <div class="tool-targets">
+    <div class="target" data-target="fire" data-usage="Used for warmth and cooking">Used for warmth and cooking</div>
+  <div class="target" data-target="axe" data-usage="Used for cutting wood and making shelters">Used for cutting wood and making shelters</div>
+  <div class="target" data-target="spear" data-usage="Used for hunting animals">Used for hunting animals</div>
+  <div class="target" data-target="hammer" data-usage="Used to shape other stones">Used to shape other stones</div>
+  <div class="target" data-target="shell" data-usage="Used for scooping and ornamentation">Used for scooping and ornamentation</div>
+  <div class="target" data-target="needle" data-usage="Used for sewing hides or clothing">Used for sewing hides or clothing</div>
+</div>
+</div>
+<p id="tool-match-feedback"></p>
+<button id="replay-button" style="display: none;">🔄 Replay</button>
+</div>
+
+<div class="timeline-card" data-aos="fade-up">
+    <h3>🏛️ Ancient Civilizations</h3>
+    <p><strong>Rise of Empires:</strong> Egypt, Mesopotamia, Indus Valley, and China shaped politics and culture.</p>
+    <p><strong>Science & Philosophy:</strong> Advances in astronomy, math, and thought.</p>
+    <button onclick="this.nextElementSibling.classList.toggle('show')">📖 Show Details</button> 
+    <div class="timeline-details">
+     <ul>
+      <li>📜 Cuneiform and hieroglyphs were used for record keeping, law, and rituals.</li>
+      <li>🏙️ Cities like Uruk, Thebes, and Mohenjo-daro flourished with planned infrastructure.</li>
+      <li>🧮 Mathematical concepts like zero and geometry emerged.</li>
+      <li>⚖️ The Code of Hammurabi introduced early forms of written law.</li>
+     </ul>
+    </div>
+    <h4>🧩 Mini Game: Build the Ancient Monument</h4>
+    <label for="monument-select">Choose a Monument:</label>
+    <select id="monument-select">
+        <option value="pyramids">Pyramids of Giza</option>
+        <option value="ziggurat">Ziggurat of Ur</option>
+        <option value="parthenon">Parthenon</option>
+    </select>
+    <button id="start-puzzle">Start Puzzle</button>
+    <div id="puzzle-container"></div>
+    <div id="puzzle-message"></div>
+   </div>
+
+  
+<div class="timeline-card" data-aos="fade-up">
+    <h3>⚔️ Middle Ages</h3>
+ xtElementSibling.classList.toggle('show')">📖 Show Details</button>
+    <div class="timeline-details">
+    <ul>
+     <li>⛪ Gothic cathedrals symbolized religious power and innovation in architecture.</li>
+     <li>🕋 The Islamic Golden Age advanced medicine, astronomy, and literature.</li>
+     <li>📚 The invention of the printing press (c. 1440) revolutionized knowledge sharing.</li>
+     <li>🧭 Navigation tools like the astrolabe paved the way for exploration.</li>
+    </ul>
+   </div>
+  <h4>🧩 Mini Game: Middle Age Decision Quest</h4> 
+    <div id="quest-text"></div>
+    <div id="quest-options"></div>
+  </div>
+
+<div class="timeline-card" data-aos="fade-up">
+  <h3>🎨 Renaissance & Enlightenment</h3>
+  <p><strong>Intellectual Awakening:</strong> Humanism, secular thought, and rediscovery of classical knowledge reshaped European thinking.</p>
+  <p><strong>Scientific Inquiry:</strong> Pioneers like Galileo and Newton advanced astronomy, physics, and mathematics.</p>
+  <p><strong>Artistic Brilliance:</strong> Masters like Michelangelo and Da Vinci created iconic works, blending science and art.</p>
+
+  <button onclick="this.nextElementSibling.classList.toggle('show')">📖 Show Details</button>
+  <div class="timeline-details">
+    <ul>
+      <li>🖌️ <strong>Renaissance Art:</strong> Realism, perspective, and anatomy transformed visual storytelling (e.g., Sistine Chapel, Mona Lisa).</li>
+      <li>📚 <strong>Printing Revolution:</strong> Gutenberg’s press (1440s) enabled mass literacy and spread of ideas.</li>
+      <li>🔭 <strong>Scientific Revolution:</strong> Heliocentrism (Copernicus), telescopic observation (Galileo), and laws of motion (Newton) redefined science.</li>
+      <li>🧠 <strong>Philosophical Inquiry:</strong> Enlightenment thinkers like Voltaire, Locke, and Rousseau promoted individual rights, democracy, and secularism.</li>
+      <li>🏛️ <strong>Legacy:</strong> Inspired political revolutions (e.g., French & American), and paved the way for modern institutions and science.</li>
+    </ul>
+  </div>
+<div id="memoryGame">
+    <h4>🧩 Mini Game: Find the Renaissance Painting Pairs</h4>
+    <button id="startMemoryGame">Start Pairing</button>
+    <div id="gameBoard"></div>
+    <p id="matchCount">Pairs found: 0</p>
+    <p id="funFact"></p>
+    <p id="pairtimer">Time: 0s</p>
+    <button id="restartMemoryGame" style="display: none;">Play Again</button>
+</div>
+</div>
+
+  
+<div class="timeline-card" data-aos="fade-up">
+    <h3>🧪 Modern Era</h3>
+    <p><strong>Scientific Revolution:</strong> Enlightenment, rationalism, and major scientific discoveries.</p>
+    <p><strong>Industrialization:</strong> Mass production and urban growth revolutionized economies.</p>
+    <p><strong>Global Expansion:</strong> Colonization and cultural exchanges reshaped continents.</p>
+    <button onclick="this.nextElementSibling.classList.toggle('show')">📖 Show Details</button>
+     <div class="timeline-details">
+      <ul>
+       <li>🔬 The Scientific Revolution challenged old beliefs and laid foundations for modern science.</li>
+       <li>🏭 Industrial factories led to urbanization and new labor systems.</li>
+       <li>🚢 Colonial empires expanded across Asia, Africa, and the Americas.</li>
+       <li>📜 Enlightenment thinkers promoted liberty, reason, and separation of powers.</li>
+     </ul>
+    </div>
+<div id="timelineGame">
+    <h4>🧩 Mini Game: Build the Modern Era Timeline</h4>
+    <div>
+        <label for="levelSelect">Select Level:</label>
+        <select id="levelSelect">
+            <option value="easy">Easy (3 events)</option>
+            <option value="medium" selected>Medium (6 events)</option>
+            <option value="hard">Hard (9 events)</option>
+        </select>
+        <button id="startTimelineGame">Start Timeline Game</button>
+    </div>
+
+    <div id="Timelinetimer">Time: 0s</div>
+
+    <div id="eventCards" style="display: flex; gap: 10px; margin: 20px 0;"></div>
+
+    <div id="timelineSlots" style="display: flex; gap: 10px; margin: 20px 0;">
+        <!-- Timeline slots will be generated dynamically -->
+    </div>
+
+    <button id="submitTimeline" style="display: none;">Submit Timeline</button>
+    <p id="timelineResult"></p>
+</div>
+  </div>
+
+<div class="timeline-card" data-aos="fade-up">
+    <h3>🌍 Contemporary Era</h3>
+    <p><strong>Technological Advancements:</strong> The digital revolution, transportation, and instant communication.</p>
+    <p><strong>Globalization:</strong> Interconnected economies, cultures, and global awareness.</p>
+    <button onclick="this.nextElementSibling.classList.toggle('show')">📖 Show Details</button> 
+    <div class="timeline-details">
+     <ul>
+      <li>💻 Computers and the internet have reshaped education, work, and communication.</li>
+      <li>🛰️ Satellites and GPS systems connect the globe in real time.</li>
+      <li>🧬 Biotechnology and AI are pushing boundaries of health and creativity.</li>
+      <li>🌐 Global organizations like the UN and WHO promote cooperation across borders.</li>
+     </ul>
+    </div> 
+  <h4>🧩 Mini Game: Cause & Effect Explorer</h4>
+  <div id="game-card" class="ce-card">
+    <p><strong>Event:</strong> <span id="event-text">Loading...</span></p>
+    <div class="choices">
+      <div>
+        <label>Choose the Cause:</label>
+        <select id="cause-select">
+          <option>Loading...</option>
+        </select>
+      </div>
+      <div>
+        <label>Choose the Effect:</label>
+        <select id="effect-select">
+          <option>Loading...</option>
+        </select>
+      </div>
+    </div>
+    <button id="submit-btn" onclick="submitAnswers()">Submit</button>
+    <p id="ce-feedback"></p>
+    <p id="ce-explanation"></p>
+    <p id="ce-score">Score: 0</p>
+    <button id="try-again-btn" onclick="restartGame()" style="display: none;">🔁 Try Again</button>
+    <p id="final-score-message"></p>
+  </div>
+</div>
+
+
+  
+  <h3>🎥 Human Civilisation Video</h3>
+  <div> Click to play and journey through the evolution of human civilisation.
+  <div style="margin-top: 30px;" class="video-container">
+    <video muted playsinline controls preload="none"> 
+    <source src="videos/human_civilization.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  </div>
+  
+
+  <h3>🔍 Revision: Interactive Time Travel</h3>
+  <div class="timeline">
+    <button id="btn-prehistory">📜 Prehistory</button>
+    <button id="btn-ancient">🏛️ Ancient Civilizations</button>
+    <button id="btn-middle_age">⚔️ Middle Ages Era</button>
+    <button id="btn-renaissance">🎨 Renaissance</button>
+    <button id="btn-modern">🧪 Modern Era</button>
+    <button id="btn-contemporary">🌍 Contemporary Era</button>
+  </div>
+
+  <div id="event-content" class="event-box">
+    <p>Click an era to uncover its secrets.</p>
+  </div>
+
+</section>
+
+<section id="fashion" data-aos="fade-right">
+  <h2>👗 Fashion Evolution</h2>
+   <h3>Fashion Evolution Through the Ages</h3>
+  <div class="fashion_timeline">
+    <!-- Prehistoric Era -->
+    <div class="era">
+      <h3>Prehistoric Era – Function Over Form</h3>
+      <div class="era-content">
+        <img src="images/prehistoric.jpg" alt="Prehistoric clothing">
+        <div class="text">
+          <p>Animal skins and natural fibers offered protection from the environment. Fashion was born out of necessity.</p>
+          <div class="sidebar">
+            <strong>Cultural Influence:</strong> Climate-driven adaptation, nomadic life<br>
+            <strong>Technology:</strong> Bone needles, tanning hides
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ancient Civilizations -->
+    <div class="era">
+      <h3>Ancient Civilizations – Identity and Status</h3>
+      <div class="era-content">
+        <img src="images/ancient.jpg" alt="Ancient Egyptian fashion">
+        <div class="text">
+          <p>Draped linen garments, ornate jewelry, and symbolism marked Egyptian, Greek, and Roman attire.</p>
+          <div class="sidebar">
+            <strong>Cultural Influence:</strong> Religion, social class<br>
+            <strong>Technology:</strong> Loom weaving, dyes<br>
+            <strong>Icon:</strong> Cleopatra (Egypt)
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="era">
+  <h3>Renaissance – Art Meets Attire</h3>
+  <div class="era-content">
+    <img src="images/renaissance.jpg" alt="Renaissance fashion">
+    <div class="text">
+      <p>Fashion exploded with color and detail. Garments featured rich fabrics, slashed sleeves, and intricate embroidery reflecting humanist ideals and artistic innovation.</p>
+      <blockquote>“Clothes make the man.” — Desiderius Erasmus</blockquote>
+      <div class="sidebar">
+        <strong>Cultural Influence:</strong> Rebirth of classical ideals, increased trade, aristocratic patronage<br>
+        <strong>Technology:</strong> Textile innovation, printing press (fashion plates)<br>
+        <strong>Icon:</strong> Isabella d’Este (Marchioness of Mantua, Renaissance fashion icon)
+      </div>
+    </div>
+  </div>
+</div>
+
+     <div class="era">
+      <h3>1920s – Flapper Glamour</h3>
+      <div class="era-content">
+        <img src="images/1920s.jpg" alt="1920s flapper fashion">
+        <div class="text">
+          <p>Short dresses, bob cuts, and fringe defined women’s liberation through fashion.</p>
+          <blockquote>“Fashion is architecture: it is a matter of proportions.” — Coco Chanel</blockquote>
+          <div class="sidebar">
+            <strong>Cultural Influence:</strong> Women's suffrage, jazz era<br>
+            <strong>Technology:</strong> Mass production, synthetic fabrics<br>
+            <strong>Icon:</strong> Coco Chanel
+          </div>
+        </div>
+      </div>
+    </div>
+
+<div class="era">
+  <h3>1950s – Postwar Elegance</h3>
+  <div class="era-content">
+    <img src="images/1950s.jpg" alt="1950s fashion">
+    <div class="text">
+      <p>Characterized by full skirts, cinched waists, and polished style, the 1950s revived glamour. Youth culture also introduced leather jackets and denim rebellion.</p>
+      <blockquote>“Give a girl the right shoes, and she can conquer the world.” — Marilyn Monroe</blockquote>
+      <div class="sidebar">
+        <strong>Cultural Influence:</strong> Post-WWII optimism, Hollywood, suburban lifestyle<br>
+        <strong>Technology:</strong> Nylon, TV commercials, ready-to-wear<br>
+        <strong>Icon:</strong> Christian Dior (creator of the New Look)
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="era">
+  <h3>1980s – Power Dressing & Pop</h3>
+  <div class="era-content">
+    <img src="images/1980s.jpg" alt="1980s fashion">
+    <div class="text">
+      <p>The 1980s were bold and expressive. From shoulder pads and power suits to streetwear and punk, fashion celebrated individualism and excess.</p>
+      <blockquote>“Fashion is the armor to survive the reality of everyday life.” — Bill Cunningham</blockquote>
+      <div class="sidebar">
+        <strong>Cultural Influence:</strong> Capitalism, MTV, feminism’s second wave<br>
+        <strong>Technology:</strong> Lycra, cable TV, globalization<br>
+        <strong>Icon:</strong> Jean-Paul Gaultier
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="era">
+  <h3>2000s – Y2K Revival & Experimental Edge</h3>
+  <div class="era-content">
+    <img src="images/2000s.jpg" alt="2000s fashion">
+    <div class="text">
+      <p>
+        The 2000s marked a shift toward experimental style, tech-inspired aesthetics, and a resurgence of early 2000s pop culture icons. From low-rise jeans and bedazzled logos to edgy high fashion, the era was defined by contradiction: maximalist excess and minimalist techwear, luxury branding and DIY rebellion.
+      </p>
+      <blockquote>“It’s a new era in fashion—there are no rules.” — Alexander McQueen</blockquote>
+      <div class="sidebar">
+        <strong>Cultural Influence:</strong> Rise of reality TV, celebrity culture, 9/11 aftermath, global consumerism<br>
+        <strong>Technology:</strong> Fashion blogging, digital photography, fast fashion boom<br>
+        <strong>Icon:</strong> Alexander McQueen (avant-garde visionary of the 2000s)
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="era">
+  <h3>2020s – Sustainable Expression & Digital Identity</h3>
+  <div class="era-content">
+    <img src="images/2020s.jpg" alt="2020s fashion">
+    <div class="text">
+      <p>
+        Fashion in the 2020s blends sustainability, inclusivity, and digital transformation. Styles range from minimalist loungewear to maximalist streetwear, all while championing ethics, individuality, and tech integration. Virtual fashion and the rise of the metaverse are reshaping how people express identity.
+      </p>
+      <blockquote>“Buy less, choose well, make it last.” — Vivienne Westwood</blockquote>
+      <div class="sidebar">
+        <strong>Cultural Influence:</strong> Climate crisis, gender inclusivity, post-pandemic lifestyle, social media activism<br>
+        <strong>Technology:</strong> AI-powered design, 3D virtual try-ons, NFT fashion, sustainable textile innovations<br>
+        <strong>Icon:</strong> Demna (Balenciaga), Virgil Abloh (legacy), Zendaya (fashion influence)
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+  <h3>Understanding Our Fashion Footprint</h3>
+  <p>
+    The fashion industry has a significant impact on our planet. From the resources used to make our clothes to the waste created when we dispose of them, it's essential to be aware of our "fashion footprint."
+  </p>
+  <ul>
+    <li>
+      <strong>Resource Consumption:</strong> Fashion relies heavily on water, energy, and raw materials like cotton (which requires extensive water and pesticides) and petroleum-based synthetic fibers.
+    </li>
+    <li>
+      <strong>Pollution:</strong> Textile production and dyeing processes can lead to water and air pollution. Fast fashion contributes to chemical runoff and greenhouse gas emissions.
+    </li>
+     <li>
+      <strong>Waste:</strong> A significant amount of clothing ends up in landfills each year. Synthetic fabrics can take decades to decompose, contributing to environmental degradation.
+    </li>
+  </ul>
+
+  <h3>The Rise of Sustainable Fashion</h3>
+  <p>
+    Sustainable fashion is a movement that seeks to address these negative impacts. It involves designing, manufacturing, and using clothes in ways that minimize environmental harm and maximize positive social impact.
+  </p>
+  
+  <h4>Key Principles of Sustainable Fashion</h4>
+  <ul>
+    <li>
+      <strong>Eco-friendly Materials:</strong> Using organic cotton, recycled fibers, and innovative textiles like those made from pineapple leaves or mushrooms.
+    </li>
+    <li>
+      <strong>Ethical Production:</strong> Ensuring fair wages and safe working conditions for garment workers.
+    </li>
+    <li>
+      <strong>Reducing Waste:</strong> Implementing zero-waste design techniques, upcycling, and recycling textiles.
+    </li>
+     <li>
+      <strong>Transparency:</strong> Brands being open about their supply chains and environmental practices.
+    </li>
+     <li>
+      <strong>Circular Economy:</strong> Creating a system where clothes can be reused, remade, or recycled, rather than ending up in landfills.
+    </li>
+  </ul>
+
+  <h4>How You Can Be a More Sustainable Fashion Consumer</h4>
+  <ul>
+    <li>
+      <strong>Buy Less, Choose Well:</strong> Invest in quality pieces that will last, rather than buying into fast fashion trends.
+    </li>
+    <li>
+      <strong>Support Sustainable Brands:</strong> Look for companies that prioritize ethical and environmental practices.
+    </li>
+    <li>
+       <strong>Shop Secondhand:</strong> Give clothes a second life by buying from thrift stores or consignment shops.
+    </li>
+    <li>
+      <strong>Care for Your Clothes:</strong> Wash them properly and mend them to extend their lifespan.
+    </li>
+    <li>
+      <strong>Recycle or Donate:</strong> Don't throw clothes away! Donate them or find textile recycling programs.
+    </li>
+  </ul>
+
+  <p>
+    By making informed choices, we can all contribute to a more sustainable and ethical fashion industry.
+  </p>
+
+  <h3>AI Fashion Chatbot</h3>
+      <div id="chat-container">
+        <div id="chat-log">
+          <div class="chat-message bot-message">
+            <p>Hello! Ask me anything about fashion history or style advice.</p>
+          </div>
+        </div>
+        <input type="text" id="chat-input" placeholder="Type your question...">
+        <button id="chat-send">Send</button>
+      </div>
+
+  
+  <h3>⏱️ Quick Fashion Quiz</h3>
+
+  <div id="quiz-box">
+    <p id="quiz-question">What does "upcycling" in fashion primarily involve?</p>
+    <button id="option-a">A) Discarding old clothes</button>
+    <button id="option-b">B) Creating new items from waste materials</button>
+    <button id="option-c">C) Mass production of identical garments</button>
+    <p id="quiz-feedback"></p>
+  </div>
+  <br>
+
+  <h3>🎥 Fashion Evolution Video</h3>
+  <div> Click to play and journey through the evolution of fashion.
+  <div style="margin-top: 30px;" class="video-container">
+    <video muted playsinline controls preload="none"> 
+    <source src="videos/fashion_history.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  </div>
+
+  <h3> Revision: Fashion Evolution</h3>
+  <p> Watch trends morph from ancient robes to futuristic wearables.</p>
+
+  <div class="fashion-container">
+    <p id="fashion-caption" style="font-weight:bold;">Loading fashion...</p>
+    <img id="fashion-image" src="" alt="Fashion Style" />
+    <button id="fashion-btn">🧕 Change Look</button>
+  </div>
+
+</section>
+
+<section id="contact" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+      <h3>Contact Us</h3>
+      <p>Have questions or feedback? Reach out to us!</p>
+      <form>
+        <input type="text" placeholder="Your Name">
+        <input type="email" placeholder="Your Email">
+        <textarea placeholder="Your Message"></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+
+<footer>
+  <p>Crafted with ❤️ by Lim Xin Bing | 2025</p>
+</footer>
+
+
+</body>
+</html>
