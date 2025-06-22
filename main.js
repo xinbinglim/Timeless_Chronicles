@@ -1,72 +1,58 @@
-// JavaScript for Timeless Chronicles Website
-
 document.addEventListener('DOMContentLoaded', function() {
+setTimeout
+  (() => {document.getElementById('loader').style.display = 'none';}, 500);
+        
+ // History Timeline
 
-   // Top Button Visibility
-  window.onscroll = function() {
-  const topBtn = document.getElementById('top-btn');
-  if (topBtn) {
-    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-      topBtn.classList.add('show');
-    } else {
-      topBtn.classList.remove('show');
+  const historySlider = document.getElementById('history-slider');
+  const historyOutput = document.getElementById('history-output');
+
+  if (historySlider && historyOutput) {
+  const historyEras = [
+    "Prehistory (3.3M–3000 BCE): Stone tools, fire, farming, and early villages before writing.",
+    "Ancient Times (3000 BCE - 500 CE): The rise of early civilizations like Egypt, Greece, and Rome.",
+    "Middle Ages (500 - 1500 CE): The era of feudalism, castles, and the rise of empires.",
+    "Renaissance & Enlightenment (1500 - 1800): A rebirth of art, science, and philosophy.",
+    "Modern Era (1800 - 1945): Industrial revolution to digital age.",
+    "Contemporary Era (1945 – Present): Globalization, digital revolution, and shifting global powers."
+  ];
+
+function updateHistory() {
+ historyOutput.textContent = historyEras[historySlider.value];
+      // historyOutput.style.color = document.body.classList.contains('darkmode') ? '#f0f0f0' : '#333';
     }
+
+    historySlider.addEventListener('input', updateHistory);
+    updateHistory(); // Initialize the output
   }
-};
 
-  // Scroll to Top
-  document.getElementById('top-btn').addEventListener('click', function() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-  });
+//Darkmode
+let darkmode = localStorage.getItem('darkmode')
+const themeSwitch = document.getElementById('theme-switch')
 
-  // Play/Pause Music
-  const bgMusic = document.getElementById('bg-music');
-  const playBtn = document.getElementById('play-music-btn');
-  const volumeSlider = document.getElementById('volume-slider');
-  const volumeLabel = document.getElementById('volume-label');
+const enableDarkmode = () => {
+    document.body.classList.add('darkmode')
+    localStorage.setItem('darkmode', 'active')
+}
 
-  playBtn.addEventListener('click', function() {
-    if (bgMusic.paused) {
-      bgMusic.play();
-      playBtn.textContent = '🔇 Stop Music';
-    } else {
-      bgMusic.pause();
-      playBtn.textContent = '🎵 Play Background Music';
-    }
-  });
+const disableDarkmode = () => {
+    document.body.classList.remove('darkmode')
+    localStorage.setItem('darkmode', null)
+}
 
-  volumeSlider.addEventListener('input', function() {
-    bgMusic.volume = volumeSlider.value;
-    volumeLabel.textContent = Math.round(volumeSlider.value * 100) + '%';
-    volumeLabel.style.color = document.body.classList.contains('dark-theme') ? '#f0f0f0' : '#333';
- });
+if(darkmode === "active") enableDarkmode()
 
-  // Theme Toggle
-  document.getElementById('toggle-theme-btn').addEventListener('click', function() {
-    document.body.classList.toggle('dark-theme');
-    const isDark = document.body.classList.contains('dark-theme');
-    localStorage.setItem('theme', isDark ? 'dark' : 'light');
-    updateThemeForDynamicContent();
-  });
+if(darkmode === null) disableDarkmode()
 
-// Floating Buttons
-  document.getElementById('art-fact-btn').addEventListener('click', showArtInfo);
-  document.getElementById('btn-prehistory').addEventListener('click', () => showEvent('prehistory'));
-  document.getElementById('btn-ancient').addEventListener('click', () => showEvent('ancient'));
-  document.getElementById('btn-middle_age').addEventListener('click', () => showEvent('middle_age'));
-  document.getElementById('btn-renaissance').addEventListener('click', () => showEvent('renaissance'));
-  document.getElementById('btn-modern').addEventListener('click', () => showEvent('modern'));
-  document.getElementById('btn-contemporary').addEventListener('click', () => showEvent('contemporary'));
-  document.getElementById('fashion-btn').addEventListener('click', changeFashion);
-  document.getElementById('option-a').addEventListener('click', () => checkAnswer('a'));
-  document.getElementById('option-b').addEventListener('click', () => checkAnswer('b'));
-  document.getElementById('option-c').addEventListener('click', () => checkAnswer('c'));
-  
+themeSwitch.addEventListener('click', () => {
+    darkmode = localStorage.getItem("darkmode")
+    darkmode !== "active" ? enableDarkmode() : disableDarkmode()
+})
 
-// Art Timeline
-  const artTimelineButtons = document.querySelectorAll('.art-timeline button');
-  const artTimelineContent = document.getElementById('art-timeline-content');
+//timeline
+const artTimelineButtons = document.querySelectorAll('.art-timeline button');
+const artTimelineContent = document.getElementById('art-timeline-content');
+
 
   const artPeriods = {
     prehistoric: {
@@ -121,14 +107,14 @@ document.addEventListener('DOMContentLoaded', function() {
       title: "AI-Generated Art",
       description: "Visual artwork created or enhanced through the use of artificial intelligence (AI) programs.",
       artworks: [
-          { src: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Th%C3%A9%C3%A2tre_D%E2%80%99op%C3%A9ra_Spatial.png/1024px-Th%C3%A9%C3%A2tre_D%E2%80%99op%C3%A9ra_Spatial.png", alt: "Théâtre D'opéra Spatial" },
+          { src: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Th%C3%A9%C3%A2tre_D%E2%80%99op%C3%A9ra_Spatial.png/1024px-Th%C3%A9%E2%80%99op%C3%A9ra_Spatial.png", alt: "Théâtre D'opéra Spatial" },
           { src: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Edmond_de_Belamy.png/800px-Edmond_de_Belamy.png", alt: "Edmond de Belamy" }
       ]
     }
 
    };
 
-  function showArtPeriod(era) {
+   function showArtPeriod(era) {
     const period = artPeriods[era];
     if (period) {
       let content = `<h3>${period.title}</h3><p>${period.description}</p>`;
@@ -148,8 +134,6 @@ document.addEventListener('DOMContentLoaded', function() {
         content += '<p class="art-tip">📚  Tip: Click on any artwork image to explore more on Wikipedia!</p>';  
       }
       artTimelineContent.innerHTML = content;
-      // Update text colors for dark theme consistency
-      updateTextColors(artTimelineContent);
       
         const artGrid = artTimelineContent.querySelector('.art-grid');
         if (artGrid) {
@@ -165,7 +149,6 @@ document.addEventListener('DOMContentLoaded', function() {
       
     } else {
       artTimelineContent.innerHTML = '<p>No information available for this period.</p>';
-        artTimelineContent.style.color = document.body.classList.contains('dark-theme') ? '#f0f0f0' : '#333';
     }
   }
 
@@ -178,7 +161,7 @@ document.addEventListener('DOMContentLoaded', function() {
       button.classList.add('active');
     });
   });
-    document.getElementById('retry-btn').addEventListener('click', function () {
+  document.getElementById('retry-btn').addEventListener('click', function () {
   currentQuestion = 0;
   score = 0;
   scoreDisplay.textContent = 'Score: 0';
@@ -190,12 +173,11 @@ document.addEventListener('DOMContentLoaded', function() {
   // Show the first period on load or a default message
   showArtPeriod('prehistoric');
 
-  // Function to update text colors within an element
-  //Initial call to set colors on load
-  updateTextColors(artTimelineContent);  
-// Art Facts
-  const artFacts = [
-  {
+document.getElementById('art-fact-btn').addEventListener('click', showArtInfo);
+
+// Art Facts (keep as is)
+const artFacts = [
+    {
     fact: "The Mona Lisa has no eyebrows!",
     detail: "Shaving eyebrows was fashionable during the Renaissance.",
     emoji: "🖼️",
@@ -317,13 +299,13 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 ];
 
-  let currentFactIndex = 0;
+let currentFactIndex = 0;
 
-  function showArtInfo() {
+function showArtInfo() {
   const factElement = document.getElementById('art-fact');
-
   const selected = artFacts[currentFactIndex];
 
+  // 2. Set innerHTML (important to do this before forcing reflow if content changes)
   factElement.innerHTML = `
     <div class="fact-card">
       <div class="fact-header">${selected.emoji} <strong>${selected.category}</strong></div>
@@ -332,19 +314,15 @@ document.addEventListener('DOMContentLoaded', function() {
     </div>
   `;
 
-  // Animate
-  factElement.style.opacity = 0;
-  setTimeout(() => {
-    factElement.style.opacity = 1;
-    factElement.style.animation = "popIn 0.5s ease";
-  }, 100);
-
   // Cycle to next fact
   currentFactIndex++;
   if (currentFactIndex >= artFacts.length) {
     currentFactIndex = 0;
   }
 }
+
+showArtInfo();
+
 
 
    // Art Quiz
@@ -452,8 +430,6 @@ document.addEventListener('DOMContentLoaded', function() {
   quizResult.textContent = '';
   nextBtn.style.display = 'none';
   quizProgress.value = currentQuestion + 1;
-  quizQuestion.style.color = document.body.classList.contains('dark-theme') ? '#f0f0f0' : '#333';
-  scoreDisplay.style.color = document.body.classList.contains('dark-theme') ? '#f0f0f0' : '#333';
   startTimer(); // Restart timer here
 }
 
@@ -484,9 +460,6 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   scoreDisplay.textContent = 'Score: ' + score;
-  quizResult.style.color = document.body.classList.contains('dark-theme') 
-    ? (index === question.correctAnswer ? '#8AFF8A' : '#FF8A8A') 
-    : (index === question.correctAnswer ? '#4CAF50' : '#F44336');
 
   nextBtn.style.display = 'inline-block';
 }
@@ -514,44 +487,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
   loadQuestion(); // Now start quiz
 });
- 
- 
- // History Timeline
-  const historyEras = [
-    "Prehistory (3.3M–3000 BCE): Stone tools, fire, farming, and early villages before writing.",
-    "Ancient Times (3000 BCE - 500 CE): The rise of early civilizations like Egypt, Greece, and Rome.",
-    "Middle Ages (500 - 1500 CE): The era of feudalism, castles, and the rise of empires.",
-    "Renaissance & Enlightenment (1500 - 1800): A rebirth of art, science, and philosophy.",
-    "Modern Era (1800 - 1945): Industrial revolution to digital age.",
-    "Contemporary Era (1945 – Present): Globalization, digital revolution, and shifting global powers."
-  ];
 
-  document.getElementById('history-slider').addEventListener('input', updateHistory);
-
-function getDragAfterElement(container, y) {
-  const draggableElements = [...container.querySelectorAll('li:not(.dragging)')];
-
-  return draggableElements.reduce((closest, child) => {
-    const box = child.getBoundingClientRect();
-    const offset = y - box.top - box.height / 2;
-    if (offset < 0 && offset > closest.offset) {
-      return { offset: offset, element: child };
-    } else {
-      return closest;
-    }
-  }, { offset: Number.NEGATIVE_INFINITY }).element;
-}
-
-  function updateHistory() {
-    const slider = document.getElementById('history-slider');
-    const output = document.getElementById('history-output');
-    output.textContent = historyEras[slider.value];
-    output.style.color = document.body.classList.contains('dark-theme') ? '#f0f0f0' : '#333';
-  }
-
-  updateHistory();
-
-// === Match Tool Game Enhancement ===
+// === Match Tool Game ===
   function shuffleTools() {
     const container = document.querySelector('.tool-options');
     const tools = Array.from(container.children);
@@ -673,16 +610,6 @@ document.getElementById('replay-button').addEventListener('click', resetGame);
 shuffleTools();
 setupDragAndDrop();
 
-});
-
-  setTimeout
-  (() => {document.getElementById('loader').style.display = 'none';}, 1500);
-        
-   // Theme Initialization
-  const storedTheme = localStorage.getItem('theme');
-  if (storedTheme === 'dark') {
-    document.body.classList.add('dark-theme');
-  }
 
 const monumentSelect = document.getElementById('monument-select');
 const startButton = document.getElementById('start-puzzle');
@@ -771,9 +698,9 @@ function checkPuzzle() {
         puzzleMessage.textContent = `🎉 You rebuilt the monument! Fun fact: ${fact}`;
         puzzleMessage.classList.add('show');
     }
-}
+  }
 
-const questText = document.getElementById('quest-text');
+  const questText = document.getElementById('quest-text');
 const questOptions = document.getElementById('quest-options');
 
 const questSteps = {
@@ -1043,7 +970,6 @@ document.getElementById('gameBoard').addEventListener('click', (e) => {
         flipCard({ currentTarget: e.target.closest('.card') });
     }
 });
-
 
 const allEvents = [
     { name: "Industrial Revolution", order: 1, img: "images/industrial.jpg", fact: "The Industrial Revolution marked a shift to mass production." },
@@ -1326,39 +1252,6 @@ function restartGame() {
   loadCEQuestion();
 }
 
-
-
- const historyEvents = {
-    prehistory: { title: "Prehistory (3.3M–3000 BCE)", content: "Stone tools, fire, farming, and early villages before writing." },
-    ancient: { title: "Ancient Times (3000 BCE - 500 CE)", content: "The rise of early civilizations like Egypt, Greece, and Rome." },
-    middle_age: { title: "Middle Ages (500 - 1500 CE)", content: "The era of feudalism, castles, and the rise of empires." },
-    renaissance: { title: "Renaissance & Enlightenment (1500 - 1800)", content: "A rebirth of art, science, and philosophy." },
-    modern: { title: "Modern Era (1800s-1945)", content: "Industrial revolution to digital technology." },
-    contemporary: { title: "Contemporary Era (1945 – Present)", content: "Globalization, digital revolution, and shifting global powers." }
-}
-
-  function showEvent(era) {
-    const eventContent = document.getElementById('event-content');
-    const event = historyEvents[era];
-    eventContent.innerHTML = `<h4>${event.title}</h4><p>${event.content}</p>`;
-    eventContent.querySelectorAll('h4, p').forEach(el => {
-      el.style.color = document.body.classList.contains('dark-theme') ? '#f0f0f0' : '#333';
-    });
-  }
-
-  // Fashion
- // Fashion Quiz
-  function checkAnswer(option) {
-  const feedback = document.getElementById('quiz-feedback');
-  const correct = (option === 'b');
-  feedback.textContent = correct
-    ? "Correct! Upcycling involves creating new items from waste materials."
-    : "Not quite! Upcycling gives new life to old materials.";
-  feedback.style.color = correct
-    ? (document.body.classList.contains('dark-theme') ? "#8AFF8A" : "#4CAF50")
-    : (document.body.classList.contains('dark-theme') ? "#FF8A8A" : "#FF5252");
-  }
-
  const fashionStyles = [
   { era: "Prehistoric Era", image: "https://i.pinimg.com/736x/ff/51/d7/ff51d759cc73abd005fd4aa8d6b7937c.jpg" },
   { era: "Ancient Egyptian (3000 BCE)", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuiQSZ9lmVVSSrAxl_UbYi8CYEXduVNDnciw&s" },
@@ -1406,11 +1299,7 @@ if (fashionButton) {
   fashionButton.addEventListener('click', changeFashion);
 }
 
- 
-  updateThemeForDynamicContent();
+});
 
-  function updateThemeForDynamicContent() {
-    const color = document.body.classList.contains('dark-theme') ? '#f0f0f0' : '#333';
-    document.querySelectorAll('section p, section h2, section h3, label, #fashion-caption, #score-display, #art-quiz-question, #volume-label')
-      .forEach(el => el.style.color = color);
-  }
+
+
