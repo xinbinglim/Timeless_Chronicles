@@ -1,0 +1,72 @@
+.dark-theme body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.dark-theme h1, .dark-theme h2, .dark-theme h3, .dark-theme h4, .dark-theme p, .dark-theme label {
+    color: var(--text-color);
+}
+
+.dark-theme a {
+    color: var(--link-color);
+}
+
+.dark-theme a:hover {
+    color: var(--link-hover-color);
+}
+
+.dark-theme button {
+    background-color: var(--button-bg);
+    color: var(--button-text);
+}
+
+.dark-theme button:hover {
+    background-color: var(--button-hover-bg);
+    box-shadow: 0 4px 10px var(--shadow-hover);
+}
+
+
+.dark-theme .loader {
+    background: var(--background-color);
+}
+
+.dark-theme .loader-spinner {
+    border-color: var(--border-color);
+    border-top-color: var(--primary-color);
+}
+
+.dark-theme .loader-content p {
+    color: var(--text-color);
+}
+
+
+.dark-theme .floating-shapes {
+    background-image: radial-gradient(circle, var(--accent-color) 1px, transparent 1px),
+                      radial-gradient(circle, var(--primary-color) 1px, transparent 1px);
+    opacity: 0.15;
+}
+
+
+.dark-theme section {
+    background-color: var(--card-bg);
+    box-shadow: 0 5px 15px var(--shadow-base);
+}
+
+
+.dark-theme input[type="text"],
+.dark-theme input[type="email"],
+.dark-theme textarea,
+.dark-theme select {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    border-color: var(--border-color);
+}
+
+.dark-theme input[type="text"]:focus,
+.dark-theme input[type="email"]:focus,
+.dark-theme textarea:focus,
+.dark-theme select:focus {
+    border-color: var(--accent-color);
+   
+    box-shadow: 0 0 0 2px rgba(224, 122, 95, 0.2); 
+}

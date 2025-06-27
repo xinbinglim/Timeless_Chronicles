@@ -1,262 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Timeless Chronicles</title>
-  <link rel="stylesheet" href="main.css" />
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/091cfae012.js" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timeless Chronicles | Fashion</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pages/fashion.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 </head>
-
 <body>
-<!-- Scripts -->
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-<script>AOS.init();</script>
-<script src="main.js" defer></script>
-<script src="main copy.js" defer></script>
-
-<!--<div id="loader" class="loader"></div>-->
-
-<div class="wrapper">
-    <div class="sidebar">
-        <h2>Timeless Chronicles</h2>
-        <ul>
-            <li><a href="index.html"><i class="fas fa-home"></i>Home</a></li>
-            <li><a href="art.html"><i class="fas fa-palette"></i>Art</a></li>
-            <li><a href="history.html"><i class="fas fa-book"></i>History</a></li>
-            <li><a href="#header"><i class="fas fa-shirt"></i>Fashion</a></li>
-            <li><a href="#"><i class="fas fa-address-book"></i>Contact</a></li>
-        </ul> 
-        <button id="theme-switch">
-            <img src="images\dark_mode_24dp_1F1F1F_FILL1_wght400_GRAD0_opsz24.svg" height="24px">
-            <img src="images\light_mode_24dp_1F1F1F_FILL1_wght400_GRAD0_opsz24.svg" height="24px">
-        </button>
-        <div class="social_media">
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
+    <div id="loader" class="loader">
+        <div class="loader-content">
+            <div class="loader-spinner"></div>
+            <p>Loading Timeless Chronicles...</p>
         </div>
     </div>
-    <div class="main_content">
-        <div id="header" class="header">
+
+    <div class="floating-shapes"></div>
+
+    <header class="main-header">
+        <div class="header-content">
             <h1>Timeless Chronicles</h1>
-            <p>Explore the Fusion of Art, History & Fashion Across Time</p>
+            <p class="subtitle">Style Through the Centuries</p>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="art.html">Art</a></li>
+                    <li><a href="history.html">History</a></li>
+                    <li><a href="fashion.html" class="active">Fashion</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
         </div>
-        <div class="fashion-section-area">
-            <div class="timeline-card" data-aos="fade-up">
-                <h2>👗 Fashion Evolution</h2>
-                <h3>Fashion Evolution Through the Ages</h3>
-                <div class="fashion_timeline">
-                    <!-- Prehistoric Era -->
-                    <div class="era">
-                        <h3>Prehistoric Era – Function Over Form</h3>
-                        <div class="era-content">
-                            <img src="images/prehistoric.jpg" alt="Prehistoric clothing">
-                            <div class="text">
-                                <p>Animal skins and natural fibers offered protection from the environment. Fashion was born out of necessity.</p>
-                                <div class="fashion_sidebar">
-                                    <strong>Cultural Influence:</strong> Climate-driven adaptation, nomadic life<br>
-                                    <strong>Technology:</strong> Bone needles, tanning hides
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+    </header>
 
-                    <!-- Ancient Civilizations -->
-                    <div class="era">
-                        <h3>Ancient Civilizations – Identity and Status</h3>
-                        <div class="era-content">
-                            <img src="images/ancient.jpg" alt="Ancient Egyptian fashion">
-                            <div class="text">
-                                <p>Draped linen garments, ornate jewelry, and symbolism marked Egyptian, Greek, and Roman attire.</p>
-                                <div class="fashion_sidebar">
-                                    <strong>Cultural Influence:</strong> Religion, social class<br>
-                                    <strong>Technology:</strong> Loom weaving, dyes<br>
-                                    <strong>Icon:</strong> Cleopatra (Egypt)
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+    <main class="fashion-container container">
+        <section class="hero-section text-center">
+            <h2 data-aos="fade-up">The Fabric of Time</h2>
+            <p data-aos="fade-up" data-aos-delay="200">Witness how clothing and style have evolved, reflecting culture, technology, and identity, from ancient drapery to modern avant-garde.</p>
+        </section>
 
-                    <div class="era">
-                        <h3>Renaissance – Art Meets Attire</h3>
-                        <div class="era-content">
-                            <img src="images/renaissance.jpg" alt="Renaissance fashion">
-                            <div class="text">
-                                <p>Fashion exploded with color and detail. Garments featured rich fabrics, slashed sleeves, and intricate embroidery reflecting humanist ideals and artistic innovation.</p>
-                                <blockquote>“Clothes make the man.” — Desiderius Erasmus</blockquote>
-                                <div class="fashion_sidebar">
-                                    <strong>Cultural Influence:</strong> Rebirth of classical ideals, increased trade, aristocratic patronage<br>
-                                    <strong>Technology:</strong> Textile innovation, printing press (fashion plates)<br>
-                                    <strong>Icon:</strong> Isabella d’Este (Marchioness of Mantua, Renaissance fashion icon)
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="era">
-                        <h3>1920s – Flapper Glamour</h3>
-                        <div class="era-content">
-                            <img src="images/1920s.jpg" alt="1920s flapper fashion">
-                            <div class="text">
-                                <p>Short dresses, bob cuts, and fringe defined women’s liberation through fashion.</p>
-                                <blockquote>“Fashion is architecture: it is a matter of proportions.” — Coco Chanel</blockquote>
-                                <div class="fashion_sidebar">
-                                    <strong>Cultural Influence:</strong> Women's suffrage, jazz era<br>
-                                    <strong>Technology:</strong> Mass production, synthetic fabrics<br>
-                                    <strong>Icon:</strong> Coco Chanel
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                <div class="era">
-                    <h3>1950s – Postwar Elegance</h3>
-                    <div class="era-content">
-                        <img src="images/1950s.jpg" alt="1950s fashion">
-                        <div class="text">
-                            <p>Characterized by full skirts, cinched waists, and polished style, the 1950s revived glamour. Youth culture also introduced leather jackets and denim rebellion.</p>
-                            <blockquote>“Give a girl the right shoes, and she can conquer the world.” — Marilyn Monroe</blockquote>
-                            <div class="fashion_sidebar">
-                                <strong>Cultural Influence:</strong> Post-WWII optimism, Hollywood, suburban lifestyle<br>
-                                <strong>Technology:</strong> Nylon, TV commercials, ready-to-wear<br>
-                                <strong>Icon:</strong> Christian Dior (creator of the New Look)
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="era">
-                    <h3>1980s – Power Dressing & Pop</h3>
-                    <div class="era-content">
-                        <img src="images/1980s.jpg" alt="1980s fashion">
-                        <div class="text">
-                            <p>The 1980s were bold and expressive. From shoulder pads and power suits to streetwear and punk, fashion celebrated individualism and excess.</p>
-                            <blockquote>“Fashion is the armor to survive the reality of everyday life.” — Bill Cunningham</blockquote>
-                            <div class="fashion_sidebar">
-                                <strong>Cultural Influence:</strong> Capitalism, MTV, feminism’s second wave<br>
-                                <strong>Technology:</strong> Lycra, cable TV, globalization<br>
-                                <strong>Icon:</strong> Jean-Paul Gaultier
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="era">
-                    <h3>2000s – Y2K Revival & Experimental Edge</h3>
-                    <div class="era-content">
-                        <img src="images/2000s.jpg" alt="2000s fashion">
-                        <div class="text">
-                            <p>
-                                The 2000s marked a shift toward experimental style, tech-inspired aesthetics, and a resurgence of early 2000s pop culture icons. From low-rise jeans and bedazzled logos to edgy high fashion, the era was defined by contradiction: maximalist excess and minimalist techwear, luxury branding and DIY rebellion.
-                            </p>
-                            <blockquote>“It’s a new era in fashion—there are no rules.” — Alexander McQueen</blockquote>
-                            <div class="fashion_sidebar">
-                                <strong>Cultural Influence:</strong> Rise of reality TV, celebrity culture, 9/11 aftermath, global consumerism<br>
-                                <strong>Technology:</strong> Fashion blogging, digital photography, fast fashion boom<br>
-                                <strong>Icon:</strong> Alexander McQueen (avant-garde visionary of the 2000s)
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="era">
-                    <h3>2020s – Sustainable Expression & Digital Identity</h3>
-                    <div class="era-content">
-                        <img src="images/2020s.jpg" alt="2020s fashion">
-                        <div class="text">
-                            <p>
-                                Fashion in the 2020s blends sustainability, inclusivity, and digital transformation. Styles range from minimalist loungewear to maximalist streetwear, all while championing ethics, individuality, and tech integration. Virtual fashion and the rise of the metaverse are reshaping how people express identity.
-                            </p>
-                            <blockquote>“Buy less, choose well, make it last.” — Vivienne Westwood</blockquote>
-                            <div class="fashion_sidebar">
-                                <strong>Cultural Influence:</strong> Climate crisis, gender inclusivity, post-pandemic lifestyle, social media activism<br>
-                                <strong>Technology:</strong> AI-powered design, 3D virtual try-ons, NFT fashion, sustainable textile innovations<br>
-                                <strong>Icon:</strong> Demna (Balenciaga), Virgil Abloh (legacy), Zendaya (fashion influence)
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <section class="fashion-evolution-section" data-aos="fade-up">
+            <h3 class="text-center">Eras of Elegance: A Visual Journey</h3>
+            <p class="text-center mb-20">Click on each button to explore iconic styles, key trends, and cultural influences from different historical eras. Discover the stories woven into the very fabric of time.</p>
+            <div class="fashion-timeline-navigation fashion-timeline">
+                <button data-era="prehistoric">Prehistoric Era</button>
+                <button data-era="ancient">Ancient Civilizations</button>
+                <button data-era="renaissance">Renaissance</button>
+                <button data-era="ninetwozero">1920s</button>
+                <button data-era="ninefivezero">1950s</button>
+                <button data-era="nineeightzero">1980s</button>
+                <button data-era="zero">2000s</button>
+                <button data-era="twozero">2020s</button>
             </div>
-        </div>
-        <div class="timeline-card">
-            <h2>Understanding Our Fashion Footprint</h2>
-                <p>
-                    The fashion industry has a significant impact on our planet. From the resources used to make our clothes to the waste created when we dispose of them, it's essential to be aware of our "fashion footprint."
-                </p>
-                <ul>
-                    <li>
-                        <strong>Resource Consumption:</strong> Fashion relies heavily on water, energy, and raw materials like cotton (which requires extensive water and pesticides) and petroleum-based synthetic fibers.
-                    </li>
-                    <li>
-                        <strong>Pollution:</strong> Textile production and dyeing processes can lead to water and air pollution. Fast fashion contributes to chemical runoff and greenhouse gas emissions.
-                    </li>
-                    <li>
-                        <strong>Waste:</strong> A significant amount of clothing ends up in landfills each year. Synthetic fabrics can take decades to decompose, contributing to environmental degradation.
-                    </li>
-                </ul>
 
-            <h2>The Rise of Sustainable Fashion</h2>
-                <p>
-                    Sustainable fashion is a movement that seeks to address these negative impacts. It involves designing, manufacturing, and using clothes in ways that minimize environmental harm and maximize positive social impact.
-                </p>
-            
-            <h3>Key Principles of Sustainable Fashion</h3>
-                <ul>
-                    <li>
-                    <strong>Eco-friendly Materials:</strong> Using organic cotton, recycled fibers, and innovative textiles like those made from pineapple leaves or mushrooms.
-                    </li>
-                    <li>
-                    <strong>Ethical Production:</strong> Ensuring fair wages and safe working conditions for garment workers.
-                    </li>
-                    <li>
-                    <strong>Reducing Waste:</strong> Implementing zero-waste design techniques, upcycling, and recycling textiles.
-                    </li>
-                    <li>
-                    <strong>Transparency:</strong> Brands being open about their supply chains and environmental practices.
-                    </li>
-                    <li>
-                    <strong>Circular Economy:</strong> Creating a system where clothes can be reused, remade, or recycled, rather than ending up in landfills.
-                    </li>
-                </ul>
-
-                <h3>How You Can Be a More Sustainable Fashion Consumer</h3>
-                <ul>
-                    <li>
-                    <strong>Buy Less, Choose Well:</strong> Invest in quality pieces that will last, rather than buying into fast fashion trends.
-                    </li>
-                    <li>
-                    <strong>Support Sustainable Brands:</strong> Look for companies that prioritize ethical and environmental practices.
-                    </li>
-                    <li>
-                    <strong>Shop Secondhand:</strong> Give clothes a second life by buying from thrift stores or consignment shops.
-                    </li>
-                    <li>
-                    <strong>Care for Your Clothes:</strong> Wash them properly and mend them to extend their lifespan.
-                    </li>
-                    <li>
-                    <strong>Recycle or Donate:</strong> Don't throw clothes away! Donate them or find textile recycling programs.
-                    </li>
-                </ul>
-
-                <p>
-                    By making informed choices, we can all contribute to a more sustainable and ethical fashion industry.
-                </p>
-        </div>
-        <div class="timeline-card">
-            <h3>🎥 Fashion Evolution Video</h3>
-            <div> Click to play and journey through the evolution of fashion.
-                <div style="margin-top: 30px; border-radius: 10px;" class="video-container">
-                    <video width="100%" controls preload="auto"> 
-                    <source src="videos/fashion_history.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                    </video>
+            <div id="fashion-timeline-content" class="fashion-timeline-content" data-aos="fade-up">
+                <div class="timeline-placeholder">
+                    <p>Select an era above to unveil its unique fashion evolution. Each click will reveal insights into the styles, materials, and societal impacts of clothing from that period.</p>
                 </div>
+                </div>
+        </section>
+
+        <section class = "footprint-section" data-aos="fade-up">
+            <div class="footprint" data-aos="fade-up">
+                <h3 class="text-center card-title">Understanding Our Fashion Footprint</h3>
+                <p class="text-center card-description">The fashion industry has a significant impact on our planet. From the resources used to make our clothes to the waste created when we dispose of them, it's essential to be aware of our "fashion footprint."</p>
+                <p class = "point"> Resource Consumption: Fashion relies heavily on water, energy, and raw materials like cotton (which requires extensive water and pesticides) and petroleum-based synthetic fibers.</p>
+                <p class = "point"> Pollution: Textile production and dyeing processes can lead to water and air pollution. Fast fashion contributes to chemical runoff and greenhouse gas emissions.</p>
+                <p class = "point"> Waste: A significant amount of clothing ends up in landfills each year. Synthetic fabrics can take decades to decompose, contributing to environmental degradation.</p>
             </div>
+            <div class="rise" data-aos="fade-up">
+                <h3 class="text-center card-title">The Rise of Sustainable Fashion</h3>
+                <p class="text-center card-description">Sustainable fashion is a movement that seeks to address these negative impacts. It involves designing, manufacturing, and using clothes in ways that minimize environmental harm and maximize positive social impact.</p>
+                <p class = "card-description"><strong>Key Principles of Sustainable Fashion</strong></p>
+                <p class = "point">Eco-friendly Materials: Using organic cotton, recycled fibers, and innovative textiles like those made from pineapple leaves or mushrooms.</p>
+                <p class = "point">Ethical Production: Ensuring fair wages and safe working conditions for garment workers.</p>
+                <p class = "point">Reducing Waste: Implementing zero-waste design techniques, upcycling, and recycling textiles.</p>
+                <p class = "point">Transparency: Brands being open about their supply chains and environmental practices.</p>
+                <p class = "point">Circular Economy: Creating a system where clothes can be reused, remade, or recycled, rather than ending up in landfills.</p>
+                <p class = "card-description"><strong>How You Can Be a More Sustainable Fashion Consumer</strong></p>
+                <p class = "point">Buy Less, Choose Well: Invest in quality pieces that will last, rather than buying into fast fashion trends.</p>
+                <p class = "point">Support Sustainable Brands: Look for companies that prioritize ethical and environmental practices.</p>
+                <p class = "point">Shop Secondhand: Give clothes a second life by buying from thrift stores or consignment shops.</p>
+                <p class = "point">Care for Your Clothes: Wash them properly and mend them to extend their lifespan.</p>
+                <p class = "point">Recycle or Donate: Don't throw clothes away! Donate them or find textile recycling programs.</p>
+            </div>
+        </section>
+
+        <section class="fashion-chatbot-section" data-aos="fade-up">
+            <h3>AI Fashion Chatbot</h3>
+      <div id="chat-container">
+        <div id="chat-log">
+          <div class="chat-message bot-message">
+            <p>Hello! Ask me anything about fashion history or style advice.</p>
+          </div>
         </div>
-            
-</div>        
+        <input type="text" id="chat-input" placeholder="Type your question...">
+        <button id="chat-send">Send</button>
+      </div>
+        </section>
+
+        <section class="video-section" data-aos="zoom-in">
+    <h3>🎥 Experience Fashion in Motion</h3>
+    <p>Watch our exclusive documentary on the evolution of fashion. See how garments, silhouettes, and trends came alive across the centuries, reflecting societal changes and artistic innovation.</p>
+    <div class="video-container">
+        <video muted playsinline controls preload="none">
+            <source src="videos/fashion_history.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        </div>
+</section>
+
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="art.html">Art</a>
+                <a href="history.html">History</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <p class="copyright">© 2025 Timeless Chronicles. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div class="global-controls">
+        <button id="play-music-btn" class="control-btn" aria-label="Play background music">🎵 Play Music</button>
+        <button id="toggle-theme-btn" class="control-btn" aria-label="Toggle light and dark theme">🌓 Toggle Theme</button>
+        <div class="volume-control">
+            <label for="volume-slider" id="volume-label">Volume:</label>
+            <input type="range" id="volume-slider" min="0" max="1" step="0.05" value="0.5" aria-labelledby="volume-label">
+        </div>
+    </div>
+
+    <button id="top-btn" class="back-to-top" aria-label="Back to top">↑</button>
+
+    <audio id="bg-music" loop>
+        <source src="audios/Timeless-Memories.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <audio id="correctSound" src="audios/correct.mp3" preload="auto"></audio>
+    <audio id="incorrectSound" src="audios/incorrect.mp3" preload="auto"></audio>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.1.0/dist/fuse.min.js"></script>
+    <script src="js/core.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/modules/fashion-timeline.js"></script> 
+    <script src="js/modules/fashion-chatbot.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000, 
+            once: true,   
+            offset: 50     
+        });
+    </script>
+</body>
+</html>

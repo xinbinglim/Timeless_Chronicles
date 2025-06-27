@@ -1,61 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Timeless Chronicles | Home</title>
+  <link rel="stylesheet" href="css/pages/home.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Timeless Chronicles</title>
-  <link rel="stylesheet" href="main.css" />
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/091cfae012.js" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.js"></script>
 </head>
-
 <body>
-<!-- Scripts -->
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-<script>AOS.init();</script>
-<script src="main.js" defer></script>
+  <div id="loader" class="loader">
+        <div class="loader-content">
+            <div class="loader-spinner"></div>
+            <p>Loading Timeless Chronicles...</p>
+        </div>
+    </div>
 
-<div id="loader" class="loader"></div>
+  <div class="floating-shapes"></div>
 
-<div class="wrapper">
-    <div class="sidebar">
-        <h2>Timeless Chronicles</h2>
+  <header class="main-header">
+    <div class="header-content">
+      <h1>Timeless Chronicles</h1>
+      <p class="subtitle">Explore the Fusion of Art, History & Fashion Across Time</p>
+      <nav class="main-nav">
         <ul>
-            <li><a href="#home"><i class="fas fa-home"></i>Home</a></li>
-            <li><a href="art.html"><i class="fas fa-palette"></i>Art</a></li>
-            <li><a href="history.html"><i class="fas fa-book"></i>History</a></li>
-            <li><a href="fashion.html"><i class="fas fa-shirt"></i>Fashion</a></li>
-            <li><a href="#"><i class="fas fa-address-book"></i>Contact</a></li>
-        </ul> 
-        <button id="theme-switch">
-            <img src="images\dark_mode_24dp_1F1F1F_FILL1_wght400_GRAD0_opsz24.svg" height="24px">
-            <img src="images\light_mode_24dp_1F1F1F_FILL1_wght400_GRAD0_opsz24.svg" height="24px">
-        </button>
-        <div class="social_media">
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
+          <li><a href="index.html"class="active">Home</a></li>
+          <li><a href="art.html">Art</a></li>
+          <li><a href="history.html">History</a></li>
+          <li><a href="fashion.html">Fashion</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+  <main class="home-container">
+    <section class="hero-section">
+      <div class="hero-content">
+        <h2 data-aos="fade-up">Journey Through Time</h2>
+        <p data-aos="fade-up">Discover how human creativity has evolved from ancient civilizations to the digital age.</p>
+        <div class="cta-buttons">
+          <a href="art.html" class="cta-button" data-aos="fade-up">Explore Art</a>
+          <a href="history.html" class="cta-button" data-aos="fade-up">Discover History</a>
+          <a href="fashion.html" class="cta-button" data-aos="fade-up">View Fashion</a>
+        </div>
       </div>
+      <div class="hero-image" data-aos="fade-up">
+        <img src="images/hero-image.jpg" alt="Timeline collage showing art, history and fashion">
+      </div>
+    </section>
+
+    <section class="features-section" data-aos="fade-up" data-aos-delay="200">
+      <div class="feature-card">
+        <div class="feature-icon">🎨</div>
+        <h3>Art Through Ages</h3>
+        <p>From cave paintings to digital masterpieces, trace the evolution of human expression.</p>
+        <a href="art.html" class="feature-link">View Art Timeline →</a>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">🏛️</div>
+        <h3>Historical Eras</h3>
+        <p>Explore pivotal moments that shaped civilizations across millennia.</p>
+        <a href="history.html" class="feature-link">Explore History →</a>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">👗</div>
+        <h3>Fashion Evolution</h3>
+        <p>Witness how clothing reflects cultural changes through the centuries.</p>
+        <a href="fashion.html" class="feature-link">See Fashion →</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="main-footer">
+    <div class="footer-content">
+      <div class="footer-links">
+        <a href="art.html">Art</a>
+        <a href="history.html">History</a>
+        <a href="fashion.html">Fashion</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <p class="copyright">© 2025 Timeless Chronicles. All rights reserved.</p>
     </div>
-    <div class="main_content">
-        <div id="home" class="header">
-            <h1>Timeless Chronicles</h1>
-            <p>Explore the Fusion of Art, History & Fashion Across Time</p>
-        </div>  
-        <div class="home-section-area">
-            <div class="image-container">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/1200px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg" alt="Van_Gogh-Starry_Night">
-            </div>
-            <div class="text-container">
-               <p>Get ready to travel through time! Imagine exploring amazing art like 'The Starry Night' – a painting that practically swirls with emotion. But it's not just about famous paintings; we'll also dive into big moments in history that changed everything, and check out how fashion has totally transformed over the years, from ancient robes to modern streetwear.</p>
-               <br>
-               <p>This journey isn't just about looking at old stuff. You'll discover how artists captured the feelings of their time, how major historical events sparked new ways of thinking and creating, and how fashion isn't just about looking good – it tells a story about who we are and where we've come from. It's about understanding our shared past and how it shapes us today.</p>
-             </div>
-        </div>
-            
-        </div>
+  </footer>
+
+  <div class="global-controls">
+    <button id="play-music-btn" class="control-btn">🎵 Play Music</button>
+    <button id="toggle-theme-btn" class="control-btn">🌓 Toggle Theme</button>
+    <div class="volume-control">
+      <label for="volume-slider">Volume:</label>
+      <input type="range" id="volume-slider" min="0" max="1" step="0.05" value="0.5">
     </div>
-</div>
+  </div>
+  
+  <button id="top-btn" class="back-to-top">↑</button>
+
+  <audio id="bg-music" loop>
+    <source src="audios/Timeless-Memories.mp3" type="audio/mpeg">
+  </audio>
+
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script src="js/core.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/theme.js"></script>
+  <script>
+    AOS.init({
+            duration: 1000, 
+            once: true,   
+            offset: 50     
+        });
+  </script>
+</body>
+</html>

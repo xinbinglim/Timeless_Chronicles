@@ -1,234 +1,319 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Timeless Chronicles</title>
-  <link rel="stylesheet" href="main.css" />
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/091cfae012.js" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timeless Chronicles | History</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pages/history.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 </head>
-
 <body>
-<!-- Scripts -->
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-<script>AOS.init();</script>
-<script src="main.js" defer></script>
-<script src="main copy.js" defer></script>
-
-<!--<div id="loader" class="loader"></div>-->
-
-<div class="wrapper">
-    <div class="sidebar">
-        <h2>Timeless Chronicles</h2>
-        <ul>
-            <li><a href="index.html"><i class="fas fa-home"></i>Home</a></li>
-            <li><a href="art.html"><i class="fas fa-palette"></i>Art</a></li>
-            <li><a href="#header"><i class="fas fa-book"></i>History</a></li>
-            <li><a href="fashion.html"><i class="fas fa-shirt"></i>Fashion</a></li>
-            <li><a href="#"><i class="fas fa-address-book"></i>Contact</a></li>
-        </ul> 
-        <button id="theme-switch">
-            <img src="images\dark_mode_24dp_1F1F1F_FILL1_wght400_GRAD0_opsz24.svg" height="24px">
-            <img src="images\light_mode_24dp_1F1F1F_FILL1_wght400_GRAD0_opsz24.svg" height="24px">
-        </button>
-        <div class="social_media">
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
+    <div id="loader" class="loader">
+        <div class="loader-content">
+            <div class="loader-spinner"></div>
+            <p>Loading Timeless Chronicles...</p>
         </div>
     </div>
-    <div class="main_content">
-        <div id="header" class="header">
+
+    <div class="floating-shapes"></div>
+
+    <header class="main-header">
+        <div class="header-content container">
             <h1>Timeless Chronicles</h1>
-            <p>Explore the Fusion of Art, History & Fashion Across Time</p>
+            <p class="subtitle">Journey Through the Ages</p>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="art.html">Art</a></li>
+                    <li><a href="history.html" class="active">History</a></li>
+                    <li><a href="fashion.html">Fashion</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
         </div>
-        <div class="history-section-area">
-            <div class="timeline-card" data-aos="fade-up">
-                <h2>📚 History Timeline</h2>
-                <p>Take a scroll through the monumental milestones of human civilization.</p>
-                <input type="range" min="0" max="5" value="0" id="history-slider">
-                <p id="history-output"></p>
-                <div class="civilization-timeline">
-                    <a href="https://www.timemaps.com/history/" target="_blank" class="ai-art-btn">🗺️ Explore the Interactive History Map</a>
+    </header>
+
+    <main class="history-container container">
+        <section class="hero-section text-center">
+            <h2 data-aos="fade-up">Unraveling the Past</h2>
+            <p data-aos="fade-up">Dive deep into pivotal moments and grand civilizations that shaped the world we live in.</p>
+        </section>
+
+        <section class="history-timeline-section" data-aos="fade-up">
+            <h3 class="text-center">A Chronicle of Civilizations</h3>
+            <p class="text-center mb-20">Explore key events and discoveries across different historical periods.</p>
+            <div class="timeline-navigation">
+                <input type="range" id="history-slider" min="0" max="0" value="0"> <p id="history-output">Current Era: Prehistory</p>
+            </div>
+            <div id="history-timeline-content" class="timeline-content">
+                <div id="event-content" class="event-details">
+                    <h4>Select an era to learn more!</h4>
+                    <p>Use the slider to navigate through different historical periods.</p>
                 </div>
             </div>
+        </section>
 
-            <div class="timeline-card" data-aos="fade-up">
-                <h2>🧬 Prehistory</h3>
-                <p><strong>Early Human Evolution:</strong> Development of tools, use of fire, and emergence of Homo sapiens.</p>
-                <p><strong>Neolithic Revolution:</strong> Rise of agriculture and settled communities around 10,000 BCE.</p>
-                <p><strong>Early Civilizations:</strong> Birth of writing systems and complex societies.</p>
-                <button onclick="this.nextElementSibling.classList.toggle('show')">📖 Show Details</button>
-                <div class="timeline-details">
-                    <ul>
-                    <li>🔥 Mastery of fire allowed warmth, cooking, and protection.</li>
-                    <li>🪓 Early stone tools (Oldowan and Acheulean) helped humans hunt and build.</li>
-                    <li>🎨 Cave paintings and symbolic artifacts hint at spiritual and cultural life.</li>
-                    <li>🚶‍♂️ Human migration out of Africa led to global spread of Homo sapiens.</li>
-                    </ul>
+        <section class="interactive-games-section" data-aos="fade-up">
+            <h3 class="text-center" data-aos="fade-up">Engage with History</h3>
+            <p class="text-center mb-20" data-aos="fade-up">Test your knowledge and skills with interactive challenges.</p>
+
+            <div class="game-grid">
+                <div class="game-card card-item" data-aos="fade-up">
+                    <h3>🧬 Prehistory</h3>
+    <p><strong>Early Human Evolution:</strong> Development of tools, use of fire, and emergence of Homo sapiens.</p>
+    <p><strong>Neolithic Revolution:</strong> Rise of agriculture and settled communities around 10,000 BCE.</p>
+    <p><strong>Early Civilizations:</strong> Birth of writing systems and complex societies.</p>
+    <div class="timeline-details">
+     <ul>
+      <li>🔥 Mastery of fire allowed warmth, cooking, and protection.</li>
+      <li>🪓 Early stone tools (Oldowan and Acheulean) helped humans hunt and build.</li>
+      <li>🎨 Cave paintings and symbolic artifacts hint at spiritual and cultural life.</li>
+      <li>🚶‍♂️ Human migration out of Africa led to global spread of Homo sapiens.</li>
+    </ul>
+   </div>
+                    <h4>🧩 Mini Game: Tool Matching Game</h4>
+                    <p>Match ancient tools to their correct usage.</p>
+                    <div id="match-tools-container" class="tool-matching-game">
+                        <div id="tool-options" class="tool-options">
+                            <div class="tool" draggable="true" data-match="fire" data-name="Fire">🔥 Fire</div>
+                            <div class="tool" draggable="true" data-match="axe" data-name="Stone Axe">🪓 Stone Axe</div>
+                            <div class="tool" draggable="true" data-match="spear" data-name="Spear">🏹 Spear</div>
+                            <div class="tool" draggable="true" data-match="hammer" data-name="Hammerstone">🪨 Hammerstone</div>
+                            <div class="tool" draggable="true" data-match="shell" data-name="Shell">🐚 Shell</div>
+                            <div class="tool" draggable="true" data-match="needle" data-name="Bone Needle">🧵 Bone Needle</div>
+                        </div>
+                        <div id="tool-targets" class="tool-targets">
+                            <div class="target" data-target="fire" data-usage="To cook food and provide warmth.">Warmth & Cooking</div>
+                            <div class="target" data-target="axe" data-usage="For cutting wood and shaping materials.">Cutting & Shaping</div>
+                            <div class="target" data-target="spear" data-usage="Used for hunting and defense.">Hunting & Defense</div>
+                            <div class="target" data-target="hammer" data-usage="To strike, break, or shape hard objects.">Breaking & Shaping</div>
+                            <div class="target" data-target="shell" data-usage="Used as early utensils or ornaments.">Utensil & Ornament</div>
+                            <div class="target" data-target="needle" data-usage="For sewing clothes or crafting nets.">Sewing & Crafting</div>
+                        </div>
+                        <p id="tool-match-feedback" class="quiz-feedback"></p>
+                        <button id="tool-match-replay" class="cta-button mt-20" style="display: none;">Replay Game</button>
+                    </div>
                 </div>
 
-                
-        </div>
-        <div class="timeline-card" data-aos="fade-up">
-            <h2>🏛️ Ancient Civilizations</h2>
-            <p><strong>Rise of Empires:</strong> Egypt, Mesopotamia, Indus Valley, and China shaped politics and culture.</p>
-            <p><strong>Science & Philosophy:</strong> Advances in astronomy, math, and thought.</p>
-            <button onclick="this.nextElementSibling.classList.toggle('show')">📖 Show Details</button> 
-            <div class="timeline-details">
-            <ul>
-            <li>📜 Cuneiform and hieroglyphs were used for record keeping, law, and rituals.</li>
-            <li>🏙️ Cities like Uruk, Thebes, and Mohenjo-daro flourished with planned infrastructure.</li>
-            <li>🧮 Mathematical concepts like zero and geometry emerged.</li>
-            <li>⚖️ The Code of Hammurabi introduced early forms of written law.</li>
-            </ul>
-            </div>
-            <h4>🧩 Mini Game: Build the Ancient Monument</h4>
-            <label for="monument-select">Choose a Monument:</label>
-            <select id="monument-select">
-                <option value="pyramids">Pyramids of Giza</option>
-                <option value="ziggurat">Ziggurat of Ur</option>
-                <option value="parthenon">Parthenon</option>
-            </select>
-            <button id="start-puzzle">Start Puzzle</button>
-            <div id="puzzle-container"></div>
-            <div id="puzzle-message"></div>
-        </div>
-        <div class="timeline-card" data-aos="fade-up">
-            <h2>⚔️ Middle Ages</h2>
-            <button onclick="this.nextElementSibling.classList.toggle('show')">📖 Show Details</button>
-            <div class="timeline-details">
-                <ul>
-                <li>⛪ Gothic cathedrals symbolized religious power and innovation in architecture.</li>
-                <li>🕋 The Islamic Golden Age advanced medicine, astronomy, and literature.</li>
-                <li>📚 The invention of the printing press (c. 1440) revolutionized knowledge sharing.</li>
-                <li>🧭 Navigation tools like the astrolabe paved the way for exploration.</li>
-                </ul>
-            </div>
-            <h4>🧩 Mini Game: Middle Age Decision Quest</h4> 
-            <div id="quest-text"></div>
-            <div id="quest-options"></div>
-        </div>
+                <div class="game-card card-item" data-aos="fade-up">
+                    <h3>🏛️ Ancient Civilizations</h3>
+    <p><strong>Rise of Empires:</strong> Egypt, Mesopotamia, Indus Valley, and China shaped politics and culture.</p>
+    <p><strong>Science & Philosophy:</strong> Advances in astronomy, math, and thought.</p>
+    <div class="timeline-details">
+     <ul>
+      <li>📜 Cuneiform and hieroglyphs were used for record keeping, law, and rituals.</li>
+      <li>🏙️ Cities like Uruk, Thebes, and Mohenjo-daro flourished with planned infrastructure.</li>
+      <li>🧮 Mathematical concepts like zero and geometry emerged.</li>
+      <li>⚖️ The Code of Hammurabi introduced early forms of written law.</li>
+     </ul>
+    </div>
+                    <h4>🧩 Mini Game: Monument Puzzle</h4>
+                    <p>Rearrange pieces to reveal famous historical monuments.</p>
+                    <div id="puzzle-game-container" class="puzzle-game">
+                        <div class="puzzle-controls">
+                            <label for="monument-select">Choose Monument:</label>
+                            <select id="monument-select">
+                                <option value="pyramids">Egyptian Pyramids</option>
+                                <option value="ziggurat">Mesopotamian Ziggurat</option>
+                                <option value="parthenon">Greek Parthenon</option>
+                            </select>
+                            <button id="start-puzzle" class="cta-button">Start Puzzle</button>
+                        </div>
+                        <div id="puzzle-board" class="puzzle-game" ></div>
+                        <p id="puzzle-message" class="quiz-feedback"></p>
+                        <button id="puzzle-reset" class="cta-button mt-20" style="display: none;">Reset Puzzle</button>
+                    </div>
+                </div>
 
-        <div class="timeline-card" data-aos="fade-up">
-            <h2>🎨 Renaissance & Enlightenment</h2>
-            <p><strong>Intellectual Awakening:</strong> Humanism, secular thought, and rediscovery of classical knowledge reshaped European thinking.</p>
-            <p><strong>Scientific Inquiry:</strong> Pioneers like Galileo and Newton advanced astronomy, physics, and mathematics.</p>
-            <p><strong>Artistic Brilliance:</strong> Masters like Michelangelo and Da Vinci created iconic works, blending science and art.</p>
+                <div class="game-card card-item" data-aos="fade-up">
+                    <h3>⚔️ Middle Ages</h3>
+    <p><strong>Spread of Religions:</strong> Christianity, Islam, and Buddhism influenced societies.</p>
+    <p><strong>Technological Growth:</strong> Printing press, navigation tools, and global trade emergence.</p>
+    <div class="timeline-details">
+    <ul>
+     <li>⛪ Gothic cathedrals symbolized religious power and innovation in architecture.</li>
+     <li>🕋 The Islamic Golden Age advanced medicine, astronomy, and literature.</li>
+     <li>📚 The invention of the printing press (c. 1440) revolutionized knowledge sharing.</li>
+     <li>🧭 Navigation tools like the astrolabe paved the way for exploration.</li>
+    </ul>
+   </div>
+                    <h4>🧩 Mini Game: Medieval Quest</h4>
+                    <p>Make choices that determine your fate in a medieval adventure.</p>
+                    <div id="medieval-quest-game" class="medieval-quest-container">
+                        <p id="quest-display"></p>
+                        <div id="quest-options" class="quiz-options"></div>
+                        <button id="quest-start" class="cta-button mt-20">Start Quest</button>
+                    </div>
+                </div>
 
-            <button onclick="this.nextElementSibling.classList.toggle('show')">📖 Show Details</button>
-            <div class="timeline-details">
-                <ul>
-                <li>🖌️ <strong>Renaissance Art:</strong> Realism, perspective, and anatomy transformed visual storytelling (e.g., Sistine Chapel, Mona Lisa).</li>
-                <li>📚 <strong>Printing Revolution:</strong> Gutenberg’s press (1440s) enabled mass literacy and spread of ideas.</li>
-                <li>🔭 <strong>Scientific Revolution:</strong> Heliocentrism (Copernicus), telescopic observation (Galileo), and laws of motion (Newton) redefined science.</li>
-                <li>🧠 <strong>Philosophical Inquiry:</strong> Enlightenment thinkers like Voltaire, Locke, and Rousseau promoted individual rights, democracy, and secularism.</li>
-                <li>🏛️ <strong>Legacy:</strong> Inspired political revolutions (e.g., French & American), and paved the way for modern institutions and science.</li>
-                </ul>
+                <div class="game-card card-item" data-aos="fade-up">
+                    <h3>🎨 Renaissance & Enlightenment</h3>
+  <p><strong>Intellectual Awakening:</strong> Humanism, secular thought, and rediscovery of classical knowledge reshaped European thinking.</p>
+  <p><strong>Scientific Inquiry:</strong> Pioneers like Galileo and Newton advanced astronomy, physics, and mathematics.</p>
+  <p><strong>Artistic Brilliance:</strong> Masters like Michelangelo and Da Vinci created iconic works, blending science and art.</p>
+  <div class="timeline-details">
+    <ul>
+      <li>🖌️ <strong>Renaissance Art:</strong> Realism, perspective, and anatomy transformed visual storytelling (e.g., Sistine Chapel, Mona Lisa).</li>
+      <li>📚 <strong>Printing Revolution:</strong> Gutenberg’s press (1440s) enabled mass literacy and spread of ideas.</li>
+      <li>🔭 <strong>Scientific Revolution:</strong> Heliocentrism (Copernicus), telescopic observation (Galileo), and laws of motion (Newton) redefined science.</li>
+      <li>🧠 <strong>Philosophical Inquiry:</strong> Enlightenment thinkers like Voltaire, Locke, and Rousseau promoted individual rights, democracy, and secularism.</li>
+      <li>🏛️ <strong>Legacy:</strong> Inspired political revolutions (e.g., French & American), and paved the way for modern institutions and science.</li>
+    </ul>
+  </div>
+                    <h4>🧩 Mini Game: Art Memory Game</h4>
+                    <p>Match famous paintings and learn fun facts!</p>
+                    <div id="memory-game-container" class="memory-game-area">
+                        <div class="game-controls">
+                            <button id="startMemoryGame" class="cta-button">Start Memory Game</button>
+                        </div>
+                        <p id="matchCount">Pairs found: 0</p>
+                        <p id="pairtimer">Time: 0s</p>
+                        <div id="gameBoard" class="game-board" style="display: none;"></div>
+                        <p id="funFact" class="quiz-feedback"></p>
+                        <button id="restartMemoryGame" class="cta-button mt-20" style="display: none;">Restart Memory Game</button>
+                    </div>
+                </div>
+
+                <div class="game-card card-item" data-aos="fade-up">
+                    <h3>🧪 Modern Era</h3>
+    <p><strong>Scientific Revolution:</strong> Enlightenment, rationalism, and major scientific discoveries.</p>
+    <p><strong>Industrialization:</strong> Mass production and urban growth revolutionized economies.</p>
+    <p><strong>Global Expansion:</strong> Colonization and cultural exchanges reshaped continents.</p>
+     <div class="timeline-details">
+      <ul>
+       <li>🔬 The Scientific Revolution challenged old beliefs and laid foundations for modern science.</li>
+       <li>🏭 Industrial factories led to urbanization and new labor systems.</li>
+       <li>🚢 Colonial empires expanded across Asia, Africa, and the Americas.</li>
+       <li>📜 Enlightenment thinkers promoted liberty, reason, and separation of powers.</li>
+     </ul>
+    </div>
+                    <h4>🧩 Mini Game: History Timeline </h4>
+                    <p>Place historical events in chronological order.</p>
+                    <div id="drag-drop-timeline-game" class="drag-drop-timeline-container">
+                        <div class="game-controls">
+                            <label for="levelSelect">Difficulty:</label>
+                            <select id="levelSelect">
+                                <option value="3">Easy (3 events)</option>
+                                <option value="6" selected>Medium (6 events)</option>
+                                <option value="9">Hard (9 events)</option>
+                            </select>
+                            <button id="startTimelineGame" class="cta-button">Start Game</button>
+                        </div>
+                        <p id="Timelinetimer">Time: 0s</p>
+                        <div id="eventCards" class="drag-items"></div>
+                        <div id="timelineSlots" class="drop-slots"></div>
+                        <p id="timelineResult" class="quiz-feedback mt-20"></p>
+                        <div class="timeline-actions"> 
+                            <button id="submitTimeline" class="btn btn-primary" style="display: none;">Submit Timeline</button>
+                            <button id="resetTimeline" class="btn btn-secondary" style="display: none;">Reset Timeline</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="game-card card-item" data-aos="fade-up">
+                    <h3>🌍 Contemporary Era</h3>
+    <p><strong>Technological Advancements:</strong> The digital revolution, transportation, and instant communication.</p>
+    <p><strong>Globalization:</strong> Interconnected economies, cultures, and global awareness.</p>
+    <div class="timeline-details">
+     <ul>
+      <li>💻 Computers and the internet have reshaped education, work, and communication.</li>
+      <li>🛰️ Satellites and GPS systems connect the globe in real time.</li>
+      <li>🧬 Biotechnology and AI are pushing boundaries of health and creativity.</li>
+      <li>🌐 Global organizations like the UN and WHO promote cooperation across borders.</li>
+     </ul>
+    </div> 
+                    <h4>🧩 Mini Game: Cause & Effect Quiz</h4>
+                    <p>Identify historical causes and their resulting effects.</p>
+                    <div id="cause-effect-game" class="cause-effect-quiz">
+                        <h4 id="event-text"></h4>
+                        <div class="choices">
+                            <div class="form-group">
+                                <label for="cause-select">Cause:</label>
+                                <select id="cause-select"></select>
+                            </div>
+                            <div class="form-group">
+                                <label for="effect-select">Effect:</label>
+                                <select id="effect-select"></select>
+                            </div>
+                        </div>
+                        <p id="ce-feedback" class="quiz-feedback"></p>
+                        <p id="ce-explanation" class="quiz-explanation"></p>
+                        <p id="ce-score" class="quiz-score"></p>
+                        <p id="final-score-message" class="quiz-final-score"></p>
+                        <button id="submit-btn" class="cta-button mt-20">Check Answers</button>
+                        <button id="try-again-btn" class="cta-button mt-20" style="display: none;">Try Again</button>
+                    </div>
+                </div>
             </div>
-            <div id="memoryGame">
-                <h4>🧩 Mini Game: Find the Renaissance Painting Pairs</h4>
-                <button id="startMemoryGame">Start Pairing</button>
-                <div id="gameBoard"></div>
-                <p id="matchCount">Pairs found: 0</p>
-                <p id="funFact"></p>
-                <p id="pairtimer">Time: 0s</p>
-                <button id="restartMemoryGame" style="display: none;">Play Again</button>
+        </section>
+
+        <section class = "video-section"  data-aos="zoom-in">
+            <h3>🎥 Human Civilisation Video</h3>
+            <div> Click to play and journey through the evolution of human civilisation.
+                <div style="margin-top: 30px;" class="video-container">
+                    <video muted playsinline controls preload="none"> 
+                        <source src="videos/human_civilization.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
             </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content container">
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="art.html">Art</a>
+                <a href="fashion.html">Fashion</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <p class="copyright">© 2025 Timeless Chronicles. All rights reserved.</p>
         </div>
+    </footer>
 
-        
-        <div class="timeline-card" data-aos="fade-up">
-            <h2>🧪 Modern Era</h2>
-            <p><strong>Scientific Revolution:</strong> Enlightenment, rationalism, and major scientific discoveries.</p>
-            <p><strong>Industrialization:</strong> Mass production and urban growth revolutionized economies.</p>
-            <p><strong>Global Expansion:</strong> Colonization and cultural exchanges reshaped continents.</p>
-            <button onclick="this.nextElementSibling.classList.toggle('show')">📖 Show Details</button>
-            <div class="timeline-details">
-            <ul>
-            <li>🔬 The Scientific Revolution challenged old beliefs and laid foundations for modern science.</li>
-            <li>🏭 Industrial factories led to urbanization and new labor systems.</li>
-            <li>🚢 Colonial empires expanded across Asia, Africa, and the Americas.</li>
-            <li>📜 Enlightenment thinkers promoted liberty, reason, and separation of powers.</li>
-            </ul>
-            </div>
-            <h4>🧩 Mini Game: Build the Modern Era Timeline</h4>
-            <div>
-                <label for="levelSelect">Select Level:</label>
-                <select id="levelSelect">
-                    <option value="easy">Easy (3 events)</option>
-                    <option value="medium" selected>Medium (6 events)</option>
-                    <option value="hard">Hard (9 events)</option>
-                </select>
-                <button id="startTimelineGame">Start Timeline Game</button>
-            </div>
-
-            <div id="Timelinetimer">Time: 0s</div>
-
-            <div id="eventCards" style="display: flex; gap: 10px; margin: 20px 0;"></div>
-
-            <div id="timelineSlots" style="display: flex; gap: 10px; margin: 20px 0;">
-                <!-- Timeline slots will be generated dynamically -->
-            </div>
-
-            <button id="submitTimeline" style="display: none;">Submit Timeline</button>
-            <p id="timelineResult"></p>
-        
+    <div class="global-controls">
+        <button id="play-music-btn" class="control-btn">🎵 Play Music</button>
+        <button id="toggle-theme-btn" class="control-btn">🌓 Toggle Theme</button>
+        <div class="volume-control">
+            <label for="volume-slider" id="volume-label">Volume: 50%</label>
+            <input type="range" id="volume-slider" min="0" max="1" step="0.05" value="0.5">
         </div>
+    </div>
+    
+    <button id="top-btn" class="back-to-top">↑</button>
 
-        <div class="timeline-card" data-aos="fade-up">
-            <h2>🌍 Contemporary Era</h2>
-            <p><strong>Technological Advancements:</strong> The digital revolution, transportation, and instant communication.</p>
-            <p><strong>Globalization:</strong> Interconnected economies, cultures, and global awareness.</p>
-            <button onclick="this.nextElementSibling.classList.toggle('show')">📖 Show Details</button> 
-            <div class="timeline-details">
-            <ul>
-            <li>💻 Computers and the internet have reshaped education, work, and communication.</li>
-            <li>🛰️ Satellites and GPS systems connect the globe in real time.</li>
-            <li>🧬 Biotechnology and AI are pushing boundaries of health and creativity.</li>
-            <li>🌐 Global organizations like the UN and WHO promote cooperation across borders.</li>
-            </ul>
-            </div> 
-        <h4>🧩 Mini Game: Cause & Effect Explorer</h4>
-        <div id="game-card" class="ce-card">
-            <p><strong>Event:</strong> <span id="event-text">Loading...</span></p>
-            <div class="choices">
-            <div>
-                <label>Choose the Cause:</label>
-                <select id="cause-select">
-                <option>Loading...</option>
-                </select>
-            </div>
-            <div>
-                <label>Choose the Effect:</label>
-                <select id="effect-select">
-                <option>Loading...</option>
-                </select>
-            </div>
-            </div>
-            <button id="submit-btn" onclick="submitAnswers()">Submit</button>
-            <p id="ce-feedback"></p>
-            <p id="ce-explanation"></p>
-            <p id="ce-score">Score: 0</p>
-            <button id="try-again-btn" onclick="restartGame()" style="display: none;">🔁 Try Again</button>
-            <p id="final-score-message"></p>
-        </div>
-        </div>
-        
-        <div class="timeline-card">
-            <h2>🎥 Human Civilisation Video</h2>
-            <div><p>Click to play and journey through the evolution of human civilisation.</p>
-            <div style="margin-top: 30px; border-radius: 10px;" class="video-container">
-                <video width="100%"  controls preload="auto"> 
-                    <source src="videos/human_civilization.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-            </div>
-        </div>
-    </div>    
-</div>        
+    <audio id="bg-music" loop>
+        <source src="audios/Timeless-Memories.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <audio id="correctSound" src="audios/correct.mp3"></audio>
+    <audio id="incorrectSound" src="audios/incorrect.mp3"></audio>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="js/core.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/modules/history-timeline.js"></script>
+    <script src="js/modules/tool-matching.js"></script>
+    <script src="js/modules/monument-puzzle.js"></script>
+    <script src="js/modules/medieval-quest.js"></script>
+    <script src="js/modules/cause-effect-quiz.js"></script>
+    <script src="js/modules/drag-drop-timeline.js"></script>
+    <script src="js/modules/memory-game.js"></script>
+
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 50
+        });
+    </script>
+</body>
+</html>

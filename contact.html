@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timeless Chronicles | Contact Us</title>
+    <meta name="description" content="Contact Timeless Chronicles with your questions, feedback, or inquiries.">
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pages/contact.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="loader" class="loader">
+        <div class="loader-content">
+            <div class="loader-spinner"></div>
+            <p>Loading Timeless Chronicles...</p>
+        </div>
+    </div>
+
+    <div class="floating-shapes"></div>
+
+    <header class="main-header">
+        <div class="header-content container">
+            <h1>Timeless Chronicles</h1>
+            <p class="subtitle">Connect with Us</p>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="art.html">Art</a></li>
+                    <li><a href="history.html">History</a></li>
+                    <li><a href="fashion.html">Fashion</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="contact-container container">
+        <section class="contact-hero text-center" data-aos="fade-up" data-aos-once="true">
+            <h2>Reach Out to Timeless Chronicles</h2>
+            <p>We'd love to hear from you! Whether you have feedback, questions, or just want to share your thoughts, feel free to get in touch.</p>
+        </section>
+
+        <section class="contact-form-section" data-aos="fade-up" data-aos-once="true" data-aos-delay="100">
+            <h3>Send Us a Message</h3>
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name" placeholder="your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Your Email:</label>
+                    <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject:</label>
+                    <input type="text" id="subject" name="subject" placeholder="Question about history content">
+                </div>
+                <div class="form-group">
+                    <label for="message">Your Message:</label>
+                    <textarea id="message" name="message" rows="6" placeholder="Type your message here..." required></textarea>
+                </div>
+                <button type="submit" class="cta-button">Send Message</button>
+            </form>
+        </section>
+
+        <section class="contact-info-section" data-aos="fade-up" data-aos-once="true" data-aos-delay="200">
+            <h3>Other Ways to Connect</h3>
+            <div class="info-grid">
+                <div class="info-card card-item">
+                    <div class="info-icon">📧</div>
+                    <h4>Email Us</h4>
+                    <p>For general inquiries, email us at:</p>
+                    <a href="mailto:xinru2509@gmail.com">absolutehack10@gmail.com</a>
+                </div>
+                <div class="info-card card-item">
+                    <div class="info-icon">📍</div>
+                    <h4>Visit Us</h4>
+                    <address>
+                        1, Jalan Sungai Tiram 1, <br>
+                        Kampung Sungai Tiram,<br>
+                        11900 Bayan Lepas, Penang,<br>
+                        Malaysia.
+                    </address>
+                </div>
+                <div class="info-card card-item">
+                    <div class="info-icon">📞</div>
+                    <h4>Call Us</h4>
+                    <p>Reach us during business hours:</p>
+                    <a href="tel:+6046371552">04-637 1552</a>
+                </div>
+                <div class="info-card card-item">
+                    <a href="https://linktr.ee/absolutehack28028" target="_blank" rel="noopener noreferrer" class="social-link-card">
+                        <div class="info-icon">🌐</div>
+                        <h4>Social Media</h4>
+                        <p>Follow our journey on social platforms:</p>
+                        <social>Facebook: Absolute Hack<br>
+                        Instagram: @ftc.absolutehack.28028<br>
+                        Youtube: @AbsoluteHack28028<br>
+                        Website: https://linktr.ee/absolutehack28028</social>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content container">
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="art.html">Art</a>
+                <a href="history.html">History</a>
+                <a href="fashion.html">Fashion</a>
+            </div>
+            <p class="copyright">© 2025 Timeless Chronicles. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div class="global-controls">
+        <button id="play-music-btn" class="control-btn">🎵 Play Music</button>
+        <button id="toggle-theme-btn" class="control-btn">🌓 Toggle Theme</button>
+        <div class="volume-control">
+            <label for="volume-slider" id="volume-label">Volume: 50%</label>
+            <input type="range" id="volume-slider" min="0" max="1" step="0.05" value="0.5">
+        </div>
+    </div>
+    
+    <button id="top-btn" class="back-to-top">↑</button>
+
+    <audio id="bg-music" loop>
+        <source src="audios/Timeless-Memories.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <audio id="correctSound" src="audios/correct.mp3"></audio>
+    <audio id="incorrectSound" src="audios/incorrect.mp3"></audio>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="js/core.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/theme.js"></script>
+
+    <script>
+        AOS.init({
+            duration: 1000, 
+            once: true,   
+            offset: 50     
+        });
+    </script>
+</body>
+</html>

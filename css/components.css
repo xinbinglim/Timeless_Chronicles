@@ -1,0 +1,399 @@
+
+.card-item {
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px var(--shadow-base);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px var(--shadow-hover);
+}
+
+.card-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    object-fit: cover;
+}
+
+.card-item h3 {
+    margin-top: 0;
+    font-size: 1.5em;
+    color: var(--primary-color);
+}
+
+.card-item p {
+    font-size: 0.95em;
+    color: var(--text-color);
+}
+
+
+
+.fact-card { 
+   
+    background: linear-gradient(135deg, var(--card-bg), var(--background-color));
+    border-left: 5px solid var(--accent-color);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px var(--shadow-base);
+    text-align: left;
+    max-width: 700px;
+    margin: 30px auto;
+    font-size: 1.1em;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
+   
+    display: block; 
+    cursor: pointer;
+}
+
+.fact-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 25px var(--shadow-hover);
+   
+    background: linear-gradient(135deg, var(--background-color), var(--card-bg)); 
+}
+
+.fact-header {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.fact-body {
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--text-color);
+}
+
+.fact-detail {
+    font-size: 0.9em;
+    color: #666;
+}
+
+
+.dark-theme .fact-card {
+   
+    background: linear-gradient(135deg, var(--card-bg), var(--background-color)); 
+    border-left-color: var(--primary-color);
+    box-shadow: 0 6px 15px var(--shadow-base);
+}
+
+.dark-theme .fact-card:hover {
+   
+    background: linear-gradient(135deg, var(--background-color), var(--card-bg));
+}
+
+.dark-theme .fact-header {
+    color: var(--accent-color);
+}
+
+.dark-theme .fact-body {
+    color: var(--text-color);
+}
+
+.dark-theme .fact-detail {
+    color: #b0b0b0;
+}
+
+
+.quiz-container {
+    background-color: var(--card-bg);
+    padding: 30px;
+    border-radius: 12px;
+    max-width: 650px;
+    margin: 40px auto;
+    box-shadow: 0 5px 15px var(--shadow-base);
+    text-align: center;
+    transition: background-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.quiz-container h3 {
+    margin-top: 0;
+    margin-bottom: 25px;
+    color: var(--primary-color);
+}
+
+.quiz-options button {
+    display: block;
+    width: 90%;
+    margin: 12px auto;
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    padding: 15px 20px;
+    border-radius: 8px;
+    font-size: 1.05em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.quiz-options button:hover:not([disabled]) {
+    background-color: var(--button-hover-bg);
+    transform: translateX(5px);
+}
+
+.quiz-options button[disabled] {
+    opacity: 0.7;
+    cursor: not-allowed;
+    background-color: #ccc;
+    transform: none;
+}
+
+.quiz-feedback, .quiz-result {
+    font-weight: bold;
+    margin-top: 20px;
+    font-size: 1.1em;
+    text-align: center;
+    color: var(--text-color);
+}
+
+
+.quiz-feedback.correct { color: #28a745; }
+.quiz-feedback.incorrect { color: #dc3545; }
+
+
+progress {
+    width: 80%;
+    height: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--border-color);
+    margin-top: 20px;
+    margin-bottom: 10px;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+progress::-webkit-progress-bar {
+    background-color: var(--border-color);
+    border-radius: 5px;
+}
+
+progress::-webkit-progress-value {
+    background-color: var(--accent-color);
+    border-radius: 5px;
+    transition: width 0.3s ease;
+}
+
+progress::-moz-progress-bar {
+    background-color: var(--accent-color);
+    border-radius: 5px;
+}
+
+
+.dark-theme .quiz-container {
+    background-color: var(--card-bg);
+    box-shadow: 0 5px 15px var(--shadow-base);
+}
+
+.dark-theme .quiz-container h3 {
+    color: var(--accent-color);
+}
+
+.dark-theme .quiz-options button {
+    background-color: var(--button-bg);
+    color: var(--button-text);
+}
+
+.dark-theme .quiz-options button:hover:not([disabled]) {
+    background-color: var(--button-hover-bg);
+}
+
+.dark-theme .quiz-options button[disabled] {
+    background-color: #555;
+}
+
+.dark-theme .quiz-feedback.correct { color: #8aff8a; } 
+.dark-theme .quiz-feedback.incorrect { color: #ff8a8a; }
+
+.dark-theme progress::-webkit-progress-bar,
+.dark-theme progress {
+    background-color: var(--border-color);
+}
+.dark-theme progress::-webkit-progress-value {
+    background-color: var(--primary-color); 
+}
+.dark-theme progress::-moz-progress-bar {
+    background-color: var(--primary-color);
+}
+
+
+
+#chat-container {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    box-shadow: 0 5px 15px var(--shadow-base);
+    max-width: 550px;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    overflow: hidden; 
+    position: relative;
+}
+
+#chat-log {
+    flex-grow: 1;
+    padding: 15px;
+    overflow-y: auto;
+    scroll-behavior: smooth; 
+    -ms-overflow-style: none; 
+    scrollbar-width: none; 
+}
+
+#chat-log::-webkit-scrollbar {
+    display: none;
+}
+
+
+.chat-message {
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border-radius: 18px;
+    max-width: 75%;
+    word-wrap: break-word;
+    font-size: 0.95em;
+    line-height: 1.4;
+    box-shadow: 0 1px 3px var(--shadow-base);
+}
+
+.user-message {
+    background-color: var(--primary-color);
+    color: #fff;
+    margin-left: auto; 
+    border-bottom-right-radius: 5px; 
+}
+
+.bot-message {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin-right: auto;
+    border-bottom-left-radius: 5px; 
+}
+
+.chat-input-area {
+    display: flex;
+    padding: 15px;
+    border-top: 1px solid var(--border-color);
+    background-color: var(--card-bg);
+}
+
+#chat-input {
+    flex-grow: 1;
+    padding: 10px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    font-size: 1em;
+    margin-right: 10px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+#chat-input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(90, 125, 124, 0.2);
+}
+
+#chat-send {
+    padding: 10px 20px;
+    background-color: var(--accent-color);
+    color: #fff;
+    border-radius: 20px; 
+    font-weight: 600;
+}
+
+#chat-send:hover {
+    background-color: var(--button-hover-bg);
+}
+
+
+.dark-theme #chat-container {
+    background-color: var(--card-bg);
+    box-shadow: 0 5px 15px var(--shadow-base);
+}
+
+.dark-theme .user-message {
+    background-color: var(--accent-color);
+    color: #fff;
+}
+
+.dark-theme .bot-message {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.dark-theme .chat-input-area {
+    background-color: var(--card-bg);
+    border-top-color: var(--border-color);
+}
+
+.dark-theme #chat-input {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    border-color: var(--border-color);
+}
+
+.dark-theme #chat-input:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 2px rgba(224, 122, 95, 0.2);
+}
+
+.dark-theme #chat-send {
+    background-color: var(--primary-color);
+}
+
+.dark-theme #chat-send:hover {
+    background-color: var(--button-hover-bg);
+}
+
+
+
+@media (max-width: 768px) {
+    .card-item {
+        padding: 15px;
+    }
+    .card-item h3 {
+        font-size: 1.3em;
+    }
+    .fact-card {
+        padding: 20px;
+        font-size: 1em;
+        margin: 20px auto;
+    }
+    .fact-header {
+        font-size: 1.1em;
+    }
+    .quiz-container {
+        padding: 20px;
+        margin: 20px auto;
+    }
+    .quiz-options button {
+        width: 100%;
+        font-size: 0.95em;
+        padding: 12px 15px;
+    }
+    #chat-container {
+        width: 95%;
+        margin: 20px auto;
+        height: 400px;
+    }
+    .chat-message {
+        font-size: 0.9em;
+        max-width: 85%;
+    }
+    .chat-input-area {
+        padding: 10px;
+    }
+    #chat-input, #chat-send {
+        font-size: 0.9em;
+        padding: 8px 12px;
+    }
+}
