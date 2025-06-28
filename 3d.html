@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Timeless Chronicles | Home</title>
+  <link rel="stylesheet" href="css/pages/home.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+  <div id="loader" class="loader">
+        <div class="loader-content">
+            <div class="loader-spinner"></div>
+            <p>Loading Timeless Chronicles...</p>
+        </div>
+    </div>
+
+  <div class="floating-shapes"></div>
+
+  <header class="main-header">
+    <div class="header-content">
+      <h1>Timeless Chronicles</h1>
+      <p class="subtitle">Explore the Fusion of Art, History & Fashion Across Time</p>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html"class="active">Home</a></li>
+          <li><a href="art.html">Art</a></li>
+          <li><a href="history.html">History</a></li>
+          <li><a href="fashion.html">Fashion</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+  <main class="3d-container">
+        <!-- A-Frame Scene for the 3D content -->
+        <a-scene embedded prevent-scene-click>
+            <!-- Assets: Preload models and textures for smoother experience -->
+            <a-assets>
+                <!--
+                    IMPORTANT: Replace this GLTF model URL with the path to YOUR statue file.
+                    You can use local paths like "models/my_statue.gltf" or public CDN links.
+                    For demonstration, a simple astronaut model is used.
+                -->
+                <a-asset-item id="statue-model" src="models\Werewolf_Warrior.glb"></a-asset-item>
+
+                <!-- Optional: Texture for the ground or other elements -->
+            </a-assets>
+
+            <!-- Camera: User's viewpoint and interaction controls -->
+            <a-entity camera look-controls wasd-controls position="0 1.6 3"></a-entity>
+
+            <!-- Statue Model -->
+            <!-- Scale and position might need adjustment based on your specific GLTF model's size -->
+            <a-gltf-model src="#statue-model" position="0 1 -2" rotation="0 45 0" scale="0.5 0.5 0.5"></a-gltf-model>
+
+            <!-- Ground Plane -->
+            <a-plane position="0 0 -4" rotation="-90 0 0" width="10" height="10" 
+                       color="#D3D3D3" material="src: #groundTexture; repeat: 5 5"></a-plane>
+            
+            <!-- Environment / Sky -->
+            <a-sky color="#ECECEC"></a-sky>
+
+            <!-- Basic Lighting -->
+            <a-entity light="type: ambient; color: #BBB; intensity: 0.8"></a-entity>
+            <a-entity light="type: directional; color: #FFF; intensity: 0.5; position: 1 1 1"></a-entity>
+
+            <!-- Optional: Text label for the statue
+            <a-text value="Ancient Wisdom" position="0 2.5 -2.5" align="center" color="#4D372F" width="4"
+                    font="https://cdn.aframe.io/fonts/Aileron-Semibold.fnt"></a-text>
+
+            Optional: Interactive Element (e.g., a clickable sphere) -->
+            <!-- <a-sphere position="-2 1.5 -3" radius="0.5" color="#E07A5F"
+                      event-set__click="material.color: #5A7D7C; text: 'Clicked!';"></a-sphere>
+            <a-text value="Click me!" position="-2 2.2 -3" align="center" color="#4D372F"></a-text> --> -->
+
+        </a-scene>
+    </main>
+
+  <footer class="main-footer">
+    <div class="footer-content">
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="art.html">Art</a>
+        <a href="history.html">History</a>
+        <a href="fashion.html">Fashion</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <p class="copyright">© 2025 Timeless Chronicles. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <div class="global-controls">
+    <button id="play-music-btn" class="control-btn">🎵 Play Music</button>
+    <button id="toggle-theme-btn" class="control-btn">🌓 Toggle Theme</button>
+    <div class="volume-control">
+      <label for="volume-slider">Volume:</label>
+      <input type="range" id="volume-slider" min="0" max="1" step="0.05" value="0.5">
+    </div>
+  </div>
+  
+  <button id="top-btn" class="back-to-top">↑</button>
+
+  <audio id="bg-music" loop>
+    <source src="audios/Timeless-Memories.mp3" type="audio/mpeg">
+  </audio>
+
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script src="js/core.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
+  <script>
+    AOS.init({
+            duration: 1000, 
+            once: true,   
+            offset: 50     
+        });
+  </script>
+</body>
+</html>
